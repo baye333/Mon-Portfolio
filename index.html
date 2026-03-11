@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Fichier CSS personnalisé -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========================================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+        <a class="navbar-brand fw-bold logo" href="#">Lahad<span>Dev</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#accueil">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#a-propos">A propos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <!-- BOUTON CV -->
+                <li class="nav-item ms-lg-3">
+                    <a href="cv/Lahad_CV.pdf" download class="btn btn-cv">
+                        <i class="fa-solid fa-download"></i> Download CV
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!------------------------- HERO SECTION ACCEUIL--------------------------->
+<section id="accueil" class="bg-dark text-white d-flex align-items-center" style="min-height: 100vh;">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- PHOTO -->
+            <!-- <div class="col-md-5 text-center mb-4 mb-md-0">
+                <img src="images/profil.png" alt="Photo de profil" class="img-fluid rounded-circle shadow" style="width: 400px; height: 400px;">
+            </div> -->
+            <div class="col-lg-5 text-center hero-image">
+
+                <div class="profile-wrapper">
+                    <div class="blob"></div>
+
+                    <img src="images/profil.png" class="img-fluid rounded-circle profile-img" alt="Profile">
+                </div>
+
+            </div>
+
+            <!-- TEXTE -->
+            <div class="col-md-7 text-center text-md-start">
+                <h1 class="fw-bold reveal">Hi, I'm <br> <span class="text-primary reveal delay-1">Baye Lahad Dia</span></h1>
+                <h4 class="reveal delay-2">Élève Ingénieur SI & Data</h4>
+
+                <p class="mt-3 reveal delay-3" style="font-weight: bold; font-size: larger; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                    Étudiant en troisième année d’Ingénierie des Systèmes d’Information 
+                    et de Données, spécialisé en Cybersécurité & Réseaux.
+                    Passionné par le développement logiciel, la data et la sécurité des systèmes.
+                </p>
+
+                <!-- RÉSEAUX SOCIAUX -->
+                <div class="my-3 reveal delay-4 social-icons">
+                    <a href="#" class="text-white me-4 fs-4">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="baye-lahad-dia-55b35b339" class="text-white me-4 fs-4">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:bayelahad792@gmail.com" class="text-white fs-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+                <!-- BOUTONS -->
+                <div class="mt-5 reveal delay-5 button-group">
+                    <a href="#a-propos" class="btn btn-primary me-3 px-4">
+                        À propos
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light px-4">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================== A PROPOS ================= -->
+<section id="a-propos" class="about-section py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 section-title">À propos</h2>
+        <div class="row align-items-center">
+            <!-- IMAGE -->
+            <div class="col-lg-5 text-center mb-4 mb-lg-0 reveal-left">
+                <div class="about-img-wrapper">
+                    <div class="about-blob"></div>
+                    <img src="images/moi.png" alt="Moi en train de coder" class="img-fluid about-img">
+                </div>
+            </div>
+            <!-- TEXTE -->
+             <div class="col-lg-7 reveal-right">
+                <p>
+                    Passionné par l’innovation technologique et l’ingénierie logicielle,
+                    <span class="highlight">je suis actuellement étudiant en Ingénierie des Systèmes d’Information</span>
+                    et de Données à l’Université Amadou Moctar Mbow.
+                </p>
+
+                <p>
+                Je développe des compétences solides en développement logiciel,
+                cybersécurité, réseaux et analyse de données. J’aime concevoir
+                des solutions numériques performantes et sécurisées capables
+                de résoudre des problèmes concrets.
+                </p>
+
+                <p>
+                Curieux et motivé, je cherche constamment à améliorer mes
+                compétences techniques et à participer à des projets innovants
+                dans le domaine de la technologie.
+                </p>
+            </div>
+        </div>
+        <!-- DOMAINES D'EXPERTISE -->
+         <div class="mt-5">
+            <h3 class="text-center mb-4 section-subtitle">Domaines d'expertise</h3>
+            <div class="row g-4 text-center">
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-code domain-icon"></i>
+                        <h6>Développement Full Stack</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-brain domain-icon"></i>
+                        <h6>Intelligence Artificielle</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-cloud domain-icon"></i>
+                        <h6>Cloud Computing</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-shield-halved domain-icon"></i>
+                        <h6>Reseaux et  Cybersécurité</h6>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-database domain-icon"></i>
+                        <h6>Data</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- SERVICES -->
+         <div class="mt-5">
+            <h3 class="text-center mb-4 section-subtitle">Mes Services</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-laptop-code service-icon"></i>
+                        <h5>Développement Web</h5>
+                        <p>
+                            Création d’applications web modernes et responsives
+                            avec HTML, CSS, JavaScript et frameworks modernes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-cloud-arrow-up service-icon"></i>
+                        <h5>Solutions Cloud</h5>
+
+                            <p>
+                            Déploiement d’applications et infrastructures
+                            cloud sécurisées et performantes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                    <div class="service-card text-center">
+                        <i class="fa-solid fa-network-wired service-icon"></i>
+                        <h5>Administration Réseaux</h5>
+
+                            <p>
+                            L'administration de services réseaux tels que DNS, FTP, EIGRP, Service de Messagerie, HTTP, HTTPS, DHCP et VPN
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-card text-center">
+                            <i class="fa-solid fa-shield service-icon"></i>
+                            <h5>Cybersécurité</h5>
+
+                                <p>
+                                Analyse de sécurité, bonnes pratiques
+                                et protection des systèmes informatiques comme les pare-feux et les systèmes de détection d'intrusion.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div>  
+</section>
+
+<!-- ======================================= SKILLS ================= -->
+<section id="skills" class="skills-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5">Skills</h2>
+        <!-- ================= LANGAGES ================= -->
+         <h4 class="skill-group-title">Langages de Programmation</h4>
+         <div class="row">
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-python skill-icon"></i>
+                        <h5>Python</h5>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="90%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-js skill-icon"></i>
+                        <h5>JavaScript</h5>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-code skill-icon"></i>
+                        <h5>TypeScript</h5>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="75%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-c skill-icon"></i>
+                        <h5>C</h5>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="70%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-php skill-icon"></i>
+                        <h5>PHP</h5>
+                        <span>65%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="65%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ================= FRAMEWORKS ================= -->
+         <h4 class="skill-group-title mt-5">Frameworks & Bibliothèques</h4>
+         <div class="row">
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-html5 skill-icon"></i>
+                        <h5>HTML</h5>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="90%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-css3-alt skill-icon"></i>
+                        <h5>CSS / Bootstrap</h5>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ================= BASES DE DONNEES ================= -->
+
+        <h4 class="skill-group-title mt-5">Bases de Données</h4>
+        <div class="row">
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-solid fa-database skill-icon"></i>
+                        <h5>MySQL</h5>
+                        <span>75%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ================= SYSTEMES ================= -->
+
+        <h4 class="skill-group-title mt-5">Systèmes d’Exploitation</h4>
+        <div class="row">
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-linux skill-icon"></i>
+                        <h5>Linux</h5>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-windows skill-icon"></i>
+                        <h5>Windows</h5>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ================= VERSIONNING ================= -->
+
+        <h4 class="skill-group-title mt-5">Outils de Versionnement</h4>
+        <div class="row">
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-git-alt skill-icon"></i>
+                        <h5>Git</h5>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="80%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4 reveal-skill">
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <i class="fa-brands fa-github skill-icon"></i>
+                        <h5>GitHub</h5>
+                        <span>85%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar skill-bar" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ============================================= EXPERIENCE ================= -->
+<section id="experience" class="experience-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5">Expérience</h2>
+        <div class="timeline">
+            <!-- EXPERIENCE 1 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Software Engineer – Datacamp et Certifications en ligne</h5>
+                    <span class="timeline-date">2023 - Présent</span>
+                    <ul>
+                        <li>Développement de solutions académiques et projets logiciels</li>
+                        <li>Participation à des projets orientés data et cybersécurité</li>
+                        <li>Collaboration en équipe sur des architectures logicielles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <!-- EXPERIENCE 2 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Reseaux Informatiques – Université Amadou Moctar Mbow (UAM)</h5>
+                    <h6 >Conception et mise en place d'infrastructures réseaux sécurisées</h6>
+                    <span class="timeline-date">2023 - Présent</span>
+                    <ul>
+                       
+                        <li>Configuration de routeurs, commutateurs et pare-feu</li>
+                        <li>Analyse du trafic réseau et résolution de problèmes de connectivité</li>
+                        <li>Utilisation d'outils de surveillance et de diagnostic réseau</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <!-- EXPERIENCE 3 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Services Reseaux – Université Amadou Moctar Mbow (UAM)</h5>
+                    <h6 >L'administration de services réseaux tels que DNS, FTP, EIGRP, Service de Messagerie, HTTP, HTTPS, DHCP et VPN</h6>
+                    <span class="timeline-date">2023 - Présent</span>
+                    <ul>
+                        
+                        <li>La Configuration et gestion de serveurs web et de bases de données</li>
+                        <li>Implémentation de solutions de sécurité pour les services réseaux</li>
+                        <li>Surveillance des performances en utilisant des outils de diagnostic comme Wireshark   et optimisation des services réseaux </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+                <div class="timeline">
+            <!-- EXPERIENCE 4 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Administration Reseaux – Université Amadou Moctar Mbow (UAM)</h5>
+                    <h6 >Conception, déploiement et sécurisation d’une infrastructure de services réseaux pour une PME</h6>
+                    <span class="timeline-date">2023 - Présent</span>
+                    <ul>
+                        <li>Configuration de serveurs DNS, FTP, EIGRP, Service de Messagerie, HTTP, HTTPS, DHCP et VPN</li>
+                        <li>Implémentation de mesures de sécurité pour protéger les services réseaux contre les menaces potentielles</li>
+                        <li>Déployer des services réseaux essentiels</li>
+                        <li>Assurer l’interopérabilité Windows / Linux</li>
+                        <li>Mettre en place un serveur Web avec base de données (CRUD)</li>
+                        <li>Déployer et exploiter une messagerie iRedMail</li>
+                        <li>Implémenter des mécanismes de notifications par mail</li>
+                        <li>Sécuriser et documenter une infrastructure complète</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <!-- EXPERIENCE 3 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Systèmes embarqués – Université Amadou Moctar Mbow (UAM)</h5>
+                    <h6 >Concevoir et Réaliser une station intelligente de surveillance de la qualité de l’air, combinant mesure locale, affichage en temps réel et supervision à distance.</h6>
+                    <span class="timeline-date">2023 - Présent</span>
+                    <ul>
+                        <li>Conception et réalisation d'une station intelligente de surveillance de la qualité de l'air</li>
+                        <li>Intégration de capteurs pour la mesure locale</li>
+                        <li>Implémentation d'un affichage en temps réel</li>
+                        <li>Développement d'un système de supervision à distance</li>
+                        <li>Évaluer la qualité de l’air à l’aide du capteur MQ135 et afficher la valeur à l'aide d'un affichage LCD</li>
+                        <li>Afficher localement la température sur un afficheur 7 segments 4 digits</li>
+                        <li>Transmettre les données en temps réel vers une application mobile via Blynk </li>
+                        <li>l'utilisation d'un  ESP32, un capteur MQ135, un capteur DHT11, une plateforme IoT Blynk, ainsi qu’un afficheur 7 segments à 4 digits pour l’affichage local de la température.
+</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <!-- EXPERIENCE 3 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Création d’une application de gestion des documents académiques</h5>
+                    <h6 >La mise en place d’une infrastructure complète de services réseaux intégrant un serveur DNS, 
+                        un serveur de fichiers partagé (Samba), un service de transfert sécurisé de fichiers (SFTP) 
+                        ainsi qu’une application Web dynamique permettant la gestion centralisée des utilisateurs et des documents.
+                    </h6>
+                    <span class="timeline-date">2025 - Présent</span>
+                    <ul>
+                        
+                        <li>Configuration d’un serveur DNS pour la résolution de noms de domaine interne</li>
+                        <li>Implémentation d’un serveur de fichiers partagé avec Samba pour faciliter le partage de documents entre les utilisateurs</li>
+                        <li>Configuration d’un service de transfert sécurisé de fichiers (SFTP) pour permettre aux utilisateurs de transférer des fichiers en toute sécurité</li>
+                        <li>Développement d’une application Web dynamique pour la gestion centralisée des utilisateurs et des documents, offrant une interface conviviale pour l’accès et la gestion des ressources académiques</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+<!-- ============================================ FORMATION =============================== -->
+<section id="formation" class="formation-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5">Formation</h2>
+        <div class="timeline">
+            <!-- FORMATION 1 -->
+             <div class="timeline-item reveal-edu">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Cycle Ingénieur – Systèmes d’Information & Données</h5>
+                    <span class="timeline-date">Bientot </span>
+                    <p>Université Amadou Moctar Mbow (UAM) – Diamniadio</p>
+                </div>
+            </div>
+            <!-- FORMATION 2 -->
+             <div class="timeline-item reveal-edu">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Baccalauréat – Sciences Expérimentales (S2)</h5>
+                    <span class="timeline-date">2023-2024</span>
+                    <p>Lycée Alboury Ndiaye – Linguère  <br>
+                        <span class="highlight">Domaine : Sciences Expérimentales</span>
+                    </p>
+                </div>
+            </div>
+            <!-- FORMATION 2 -->
+             <div class="timeline-item reveal-edu">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-school"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Licence 3 en Ingénierie Informatique</h5>
+                    <span class="timeline-date">2023-2026 (en cours)</span>
+                    <p>Université Amadou Moctar Mbow (UAM) – Diamniadio <br>
+                        <span class="highlight">Domaine : Systemes d'informations et de données</span>
+                    </p>
+                </div>
+            </div>
+
+                <div class="timeline-item reveal-edu">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h5>Analyste en Cybersécurité certifié par FORCEN</h5>
+                        <span class="timeline-date">2025 - 2026</span>
+                        <p>FORCEN <br>
+                            <span class="highlight">Domaine : Cybersécurité</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ======================================== PROJECTS ================= -->
+<section id="projects" class="projects-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5">Projects</h2>
+        <div class="row g-4">
+            <!-- PROJECT 1 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Gestionnaire_taches.png" alt="Gestionnaire de tâches">
+                    </div>
+                    <div class="project-body">
+                        <h5>Gestionnaire de tâches</h5>
+                        <p>
+                        Application web permettant d'ajouter, modifier et supprimer des tâches.
+                        Manipulation du DOM et gestion des événements.
+                        </p>
+                        <div class="tech-stack">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="btn btn-primary btn-sm">Voir le projet</a>
+                            <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJECT 2 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Projet_smarttech.png" alt="Application Smarttech">
+                    </div>
+                    <div class="project-body">
+                        <h5>Application Smarttech</h5>
+                        <p>
+                        Application web pour la gestion des documents académiques et des ressources universitaires.
+                        </p>
+                        <div class="tech-stack">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Linux</span>
+                            <span>Apache</span>
+                            <span>MySQL</span>
+                            <span>PHP</span>
+                        </div>
+                        <div class="project-buttons">
+
+                            <a href="#" class="btn btn-primary btn-sm mt-4">Voir le projet</a>
+                            <a href="#" class="btn btn-outline-light btn-sm mt-4">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJECT 3 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/projet_reseaux.png" alt="Projet réseaux">
+                    </div>
+                    <div class="project-body">
+                        <h5>Infrastructure Réseaux</h5>
+
+                            <p>
+                            Conception et mise en place d'une infrastructure réseau sécurisée
+                            pour une organisation fictive.
+                            </p>
+                            <div class="tech-stack">
+
+                                <span>Cisco IOS</span>
+                                <span>GNS3</span>
+                                <span>Wireshark</span>
+                                <span>OSPF</span>
+
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-primary btn-sm mt-5">Voir le projet</a>
+                                <a href="#" class="btn btn-outline-light btn-sm mt-5">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<!-- =============================================== CERTIFICATIONS ================= -->
+<section id="certifications" class="certifications-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5">Certifications</h2>
+        <div class="row g-4">
+            <!-- CERTIFICATION 1 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/into_to_cyber.png" alt="Introduction à la cybersécurité">
+                    </div>
+                    <div class="cert-body">
+                        <h5>Introduction à la cybersécurité</h5>
+                        <p>
+                            Ce cours présente les bases de la cybersécurité et les menaces informatiques.
+                        </p>
+                        <!-- OUTILS / TECHNOLOGIES -->
+                         <div class="cert-tools">
+
+                             <span class="badge bg-dark text-primary">Cyber Threats</span>
+                             <span class="badge bg-dark text-primary">Network Security</span>
+                             <span class="badge bg-dark text-primary">Encryption</span>
+                            <span class="badge bg-dark text-primary">Cisco Security</span>
+                        </div>
+                        <!-- BOUTON -->
+                         <div class="cert-btn">
+                            <a href="images/into_to_cyber.png" target="_blank" class="btn btn-primary btn-sm">
+                                Voir la certification
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CERTIFICATION 1 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/cybersecurité.png" alt="Introduction à la cybersécurité">
+                    </div>
+                    <div class="cert-body">
+                        <h5>La cybersécurité</h5>
+                        <p>
+                            Ce cours présente les bases de la cybersécurité et les menaces informatiques.
+                        </p>
+                        <!-- OUTILS / TECHNOLOGIES -->
+                         <div class="cert-tools">
+                            <span class="badge bg-dark text-primary">Penetration Testing</span>
+                            <span class="badge bg-dark text-primary">Incident Response</span>
+                            <span class="badge bg-dark text-primary">Security Architecture</span>
+                            <span class="badge bg-dark text-primary">Compliance</span>
+                            <span class="badge bg-dark text-primary">Risk Management</span>
+                        </div>
+                        <!-- BOUTON -->
+                         <div class="cert-btn">
+                            <a href="images/cybersecurité.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CERTIFICATION 2 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/cloud_computing.png" alt="Cloud computing">
+                    </div>
+                    <div class="cert-body">
+                        <h5>Cloud Computing</h5>
+                        <p>Introduction aux concepts du cloud computing et aux services cloud.
+                            elle couvre les modèles de déploiement, les avantages et les défis du cloud computing.
+                        </p>
+                            <div class="cert-tools">
+                                <span class="badge bg-dark text-primary">Cloud Concepts</span>
+                                <span class="badge bg-dark text-primary">Cloud Services</span>
+                                <span class="badge bg-dark text-primary">Cloud Security</span>
+                                <span class="badge bg-dark text-primary">Cloud Architecture</span>
+                            </div>
+
+                        <!-- BOUTON -->
+                            <div class="cert-btn">
+                                <a href="images/cloud_computing.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CERTIFICATION 3 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/micro_azure.png" alt="Microservices Azure">
+                    </div>
+                    <div class="cert-body">
+                        <h5>Microservices sur Azure</h5>
+                        <p>Développement et déploiement d'applications basées sur des microservices sur Azure.
+                            elle couvre les concepts de microservices pour la création d'applications évolutives et résilientes.
+                        </p>
+                            <div class="cert-tools">
+                                <span class="badge bg-dark text-primary">Microservices Architecture</span>
+                                <span class="badge bg-dark text-primary">Azure Services</span>
+                                <span class="badge bg-dark text-primary">Containerization</span>
+                                <span class="badge bg-dark text-primary">Service Mesh</span>
+                            </div>
+                            <!-- BOUTON -->
+                            <div class="cert-btn">
+                                <a href="images/micro_azure.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CERTIFICATION 4 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/udacity.png" alt="Data Science">
+                    </div>
+                    <div class="cert-body">
+                        <h5>Data Science</h5>
+                        <p>
+                            Bases de la data science et techniques d'analyse des données avec Excel.
+                        </p>
+                                <div class="cert-tools">
+                                    <span class="badge bg-dark text-primary">Data Analysis</span>
+                                    <span class="badge bg-dark text-primary">Data Visualization</span>
+                                    <span class="badge bg-dark text-primary">Excel for Data Science</span>
+                                    <span class="badge bg-dark text-primary">Data Cleaning</span>
+                                </div>
+                            <!-- BOUTON -->
+                            <div class="cert-btn">
+                                <a href="images/udacity.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                            </div>
+
+                            </div>
+                </div>
+            </div>
+            <!-- CERTIFICATION 5 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/python2.png" alt="Python avancé">
+                    </div><div class="cert-body">
+                        <div class="cert-body">
+                            <h5>Python Avancé</h5>
+                            <p>Techniques avancées pour développer des applications Python robustes.</p>
+                                <div class="cert-tools">
+                                    <span class="badge bg-dark text-primary">Advanced Python Concepts</span>
+                                    <span class="badge bg-dark text-primary">Object-Oriented Programming</span>
+                                    <span class="badge bg-dark text-primary">Python Libraries</span>
+                                    <span class="badge bg-dark text-primary">Python for Data Science</span>
+                                </div>
+                                <!-- BOUTON -->
+                                <div class="cert-btn">
+                                    <a href="images/python2.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+
+
+<!-- ================= ==============================CONTACT ================= -->
+<section id="contact" class="contact-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-3">Contact</h2>
+        <p class="text-center contact-subtitle mb-5">
+            N'hésitez pas à me contacter pour toute collaboration ou opportunité.
+        </p>
+        <div class="row g-4 align-items-stretch">
+            <!-- CARTE LOCALISATION -->
+             <div class="col-lg-6 reveal-contact">
+                <div class="map-card">
+                    <iframe src="https://www.google.com/maps?q=Dakar,Senegal&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+
+                    </iframe>
+                </div>
+            </div>
+            <!-- FORMULAIRE -->
+             <div class="col-lg-6 reveal-contact">
+                <div class="contact-card">
+                    <form>
+                        <!-- NOM -->
+                        <div class="mb-3 input-group">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Nom" required>
+                        </div>
+                        <!-- PRENOM -->
+                        <div class="mb-3 input-group">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Prénom" required>
+                        </div>
+                        <!-- EMAIL -->
+                         <div class="mb-3 input-group">
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-envelope"></i>
+                            </span>
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <!-- MESSAGE -->
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Votre message..." required></textarea>
+                        </div>
+                        <!-- BOUTON -->
+                         <div class="text-center">
+                            <button type="submit" class="btn btn-primary contact-btn">
+                                <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- ============================================= FOOTER ============================== -->
+<footer class="footer-section">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- A PROPOS -->
+
+                <div class="col-md-4 mb-4">
+
+                <h5 class="footer-title">Profil</h5>
+                    <img src="images/logo.png" alt="Mon logo" class="footer-logo" style="width: 120px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+                
+                <br>
+                <p style="margin-right: 70px;">
+                    Étudiant en Ingénierie des Systèmes d’Information et de Données.
+                    Passionné par le développement logiciel, la cybersécurité et la data.
+                </p>
+
+                </div>
+
+            <!-- LIENS RAPIDES -->
+             <div class="col-md-4 mb-4">
+                <h5 class="footer-title">Navigation</h5>
+                <ul class="footer-links">
+
+                    <li><a href="#acceuil">Accueil</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- CONTACT -->
+             <div class="col-md-4 mb-4">
+                <h5 class="footer-title">Contact</h5>
+                <p><i class="fa-solid fa-location-dot"></i> Mbour, Sénégal</p>
+                <p><i class="fa-solid fa-envelope"></i> bayelahaddia792@gmail.com</p>
+                <div class="social-icons mt-3">
+                    <a href="https://github.com/baye333" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:bayelahaddia792@gmail.com">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-bottom text-center">
+        <p>© 2026 Lahad-Dev | Portfolio | Tous droits réservés</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script JS personnalisé -->
+<script src="script.js"></script>
+
+</body>
+</html>
