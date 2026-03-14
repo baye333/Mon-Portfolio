@@ -239,3 +239,89 @@ contact.forEach(el=>{
     contactObserver.observe(el);
 });
 
+
+// Dark mode toggle c'est pour le bouton de basculement du thème sombre
+// Ce code sélectionne le bouton de basculement du thème sombre, le corps du document et l'icône à l'intérieur du bouton. 
+// Il vérifie ensuite si un thème sombre a été précédemment sauvegardé dans le stockage local et applique ce thème si c'est le cas. 
+// Enfin, il ajoute un écouteur d'événement au bouton pour basculer entre les thèmes clair et sombre lorsque l'utilisateur clique dessus,
+//  en mettant à jour le stockage local en conséquence.
+
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+const icon = toggleBtn.querySelector("i");
+
+/* Charger le thème sauvegardé */
+
+if(localStorage.getItem("theme") === "dark"){
+    body.classList.add("dark-mode");
+    icon.classList.replace("fa-moon","fa-sun");
+}
+
+/* Switch thème */
+// Ajouter un écouteur d'événement pour le clic sur le bouton de basculement du thème
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    if(body.classList.contains("dark-mode")){
+        icon.classList.replace("fa-moon","fa-sun");
+        localStorage.setItem("theme","dark");
+    }else{
+        icon.classList.replace("fa-sun","fa-moon");
+        localStorage.setItem("theme","light");
+}
+
+});
+
+
+// EmailJS integration for contact form c'est pour l'intégration d'EmailJS pour le formulaire de contact
+(function(){
+    emailjs.init("q8XLEJ91ad8Vu2fgF");
+})();
+
+
+
+
+// cette partie du code écoute l'événement de soumission du formulaire de contact, 
+// empêche le comportement par défaut de soumission du formulaire, 
+// puis utilise EmailJS pour envoyer les données du formulaire à un service et un modèle spécifiques. 
+// Si l'envoi est réussi, une alerte de succès est affichée, sinon une alerte d'erreur est montrée.
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    emailjs.sendForm(
+        'service_t0h9t6a',
+        'template_bgwp5xc',
+        this
+)
+.then(function(){
+    alert("Message envoyé avec succès 🚀");
+}, function(error){
+    alert("Erreur lors de l'envoi ❌");
+
+});
+
+});
+
+// elle permet de récupérer les valeurs des champs du formulaire de contact, de construire un message formaté, 
+// puis d'ouvrir WhatsApp avec ce message pré-rempli pour que l'utilisateur puisse l'envoyer directement à un numéro spécifique.
+document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+    let nom = document.querySelector('input[placeholder="Nom"]').value;
+    let prenom = document.querySelector('input[placeholder="Prénom"]').value;
+    let email = document.querySelector('input[placeholder="Email"]').value;
+    let message = document.querySelector('textarea').value;
+
+    let texte = `Bonjour Lahad 👋 (mon portfolio)
+
+                    Nom: ${nom}
+                    Prénom: ${prenom}
+                    Email: ${email}
+
+                    Message:
+                    ${message}
+    `;
+
+    let url = "https://wa.me/221773984425?text=" + encodeURIComponent(texte);
+
+window.open(url, "_blank");
+
+});
+

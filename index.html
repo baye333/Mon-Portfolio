@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<!-- ========================================= NAVBAR ================= -->
+<!-- ========================================= NAVBAR ====================================================================== -->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
     <div class="container">
@@ -36,16 +36,31 @@
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experiences</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formation">Formation</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#certifications">Certifications</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
                 <!-- BOUTON CV -->
                 <li class="nav-item ms-lg-3">
-                    <a href="cv/Lahad_CV.pdf" download class="btn btn-cv">
+                    <a href="images/docs/Rapport_POO_Projet3.pdf" download class="btn btn-cv">
                         <i class="fa-solid fa-download"></i> Download CV
                     </a>
+                </li>
+                <!-- Dark Mode Toggle -->
+                <li class="nav-item ms-3">
+                    <button id="theme-toggle" class="btn btn-outline-light">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -53,7 +68,7 @@
 </nav>
 
 
-<!------------------------- HERO SECTION ACCEUIL--------------------------->
+<!------------------------- HERO SECTION ACCEUIL--------------------------------------------------------------------------------------->
 <section id="accueil" class="bg-dark text-white d-flex align-items-center" style="min-height: 100vh;">
     <div class="container">
         <div class="row align-items-center">
@@ -74,12 +89,12 @@
 
             <!-- TEXTE -->
             <div class="col-md-7 text-center text-md-start">
-                <h1 class="fw-bold reveal">Hi, I'm <br> <span class="text-primary reveal delay-1">Baye Lahad Dia</span></h1>
+                <h1 class="fw-bold reveal">Hi, I'm <br> <span class="text-primary reveal delay-1"><span class="letter">B</span>aye <span class="letter">L</span>ahad <span class="letter">D</span>ia</span></h1>
                 <h4 class="reveal delay-2">Élève Ingénieur SI & Data</h4>
 
                 <p class="mt-3 reveal delay-3" style="font-weight: bold; font-size: larger; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-                    Étudiant en troisième année d’Ingénierie des Systèmes d’Information 
-                    et de Données, spécialisé en Cybersécurité & Réseaux.
+                    <span class="text-primary">Étudiant en troisième année d’Ingénierie des Systèmes d’Information 
+                    et de Données</span>, spécialisé en Cybersécurité & Réseaux.
                     Passionné par le développement logiciel, la data et la sécurité des systèmes.
                 </p>
 
@@ -88,7 +103,7 @@
                     <a href="#" class="text-white me-4 fs-4">
                         <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="baye-lahad-dia-55b35b339" class="text-white me-4 fs-4">
+                    <a href="https://www.linkedin.com/in/baye-lahad-dia-55b35b339" class="text-white me-4 fs-4">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                     <a href="mailto:bayelahad792@gmail.com" class="text-white fs-4">
@@ -98,7 +113,7 @@
 
                 <!-- BOUTONS -->
                 <div class="mt-5 reveal delay-5 button-group">
-                    <a href="#a-propos" class="btn btn-primary me-3 px-4">
+                    <a href="#a-propos" class="btn btn-primary me-3 px-4 btn-color">
                         À propos
                     </a>
                     <a href="#contact" class="btn btn-outline-light px-4">
@@ -179,6 +194,12 @@
                         <h6>Data</h6>
                     </div>
                 </div>
+                <div class="col-md-4 col-lg-2">
+                    <div class="domain-card">
+                        <i class="fa-solid fa-cogs domain-icon"></i>
+                        <h6>DevOps</h6>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- SERVICES -->
@@ -195,14 +216,23 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-card text-center">
-                        <i class="fa-solid fa-cloud-arrow-up service-icon"></i>
-                        <h5>Solutions Cloud</h5>
+                    <div class="col-md-4">
+                        <div class="service-card text-center">
+                            <i class="fa-solid fa-cloud-arrow-up service-icon"></i>
+                            <h5>Solutions Cloud</h5>
 
                             <p>
-                            Déploiement d’applications et infrastructures
-                            cloud sécurisées et performantes.
+                            Déploiement et gestion d’applications sur des plateformes cloud comme AWS, Azure ou Google Cloud
+                            </p>
+                        </div>
+                    </div>
+                     <div class="col-md-4">
+                        <div class="service-card text-center">
+                            <i class="fa-solid fa-paint-brush service-icon"></i>
+                            <h5>UI/UX Design</h5>
+
+                            <p>
+                            Conception d’interfaces utilisateur intuitives et esthétiques avec Figma
                             </p>
                         </div>
                     </div>
@@ -230,10 +260,66 @@
                         </div>
                     </div>
                 </div>
-    </div>  
+    </div> 
+    <!-- ================= STATISTIQUES ================= -->
+     <div class="about-stats mt-5">
+        <h3 class="text-center mb-5 section-subtitle">Quelques chiffres</h3>
+        <div class="row text-center g-4">
+            <!-- EXPERIENCE -->
+             <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="fa-solid fa-briefcase stat-icon"></i>
+                    <h2 class="stat-number">2+</h2>
+                    <p>Années d'expérience</p>
+                </div>
+            </div>
+            <!-- PROJETS -->
+             <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="fa-solid fa-code stat-icon"></i>
+                    <h2 class="stat-number">10+</h2>
+                    <p>Projets réalisés</p>
+                </div>
+            </div>
+            <!-- CERTIFICATIONS -->
+             <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="fa-solid fa-certificate stat-icon"></i>
+                    <h2 class="stat-number">10+</h2>
+                    <p>Certifications</p>
+                </div>
+            </div>
+            <!-- TECHNOLOGIES -->
+             <div class="col-md-3">
+                <div class="stat-card">
+                    <i class="fa-solid fa-layer-group stat-icon"></i>
+                    <h2 class="stat-number">12+</h2>
+                    <p>Technologies utilisées</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================= TECHNOLOGIES PRINCIPALES ================= -->
+     <div class="main-tech mt-5">
+        <h3 class="text-center mb-4 section-subtitle">Technologies principales</h3>
+        <div class="tech-list text-center">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">TypeScript</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">Bootstrap</span>
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Linux</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">GitHub</span>
+            <span class="tech-badge">Cloud</span>
+        </div>
+    </div>
 </section>
 
-<!-- ======================================= SKILLS ================= -->
+<!-- ======================================= SKILLS ======================================================================================== -->
 <section id="skills" class="skills-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-5">Skills</h2>
@@ -410,7 +496,7 @@
 
 </section>
 
-<!-- ============================================= EXPERIENCE ================= -->
+<!-- ============================================= EXPERIENCE ========================================================================== -->
 <section id="experience" class="experience-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-5">Expérience</h2>
@@ -421,12 +507,12 @@
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <div class="timeline-content">
-                    <h5>Software Engineer – Datacamp et Certifications en ligne</h5>
+                    <h5>  Datacamp et Certifications en ligne</h5>
                     <span class="timeline-date">2023 - Présent</span>
                     <ul>
-                        <li>Développement de solutions académiques et projets logiciels</li>
-                        <li>Participation à des projets orientés data et cybersécurité</li>
-                        <li>Collaboration en équipe sur des architectures logicielles</li>
+                        <li>Développement de solutions académiques et projets logiciels via des plateformes d'apprentissage en ligne</li>
+                        <li>Participation à des projets orientés data et cybersécurité à travers des environnements de formation</li>
+                        <li>Collaboration en équipe sur des architectures logicielles via GitHub</li>
                     </ul>
                 </div>
             </div>
@@ -439,13 +525,13 @@
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <div class="timeline-content">
-                    <h5>Reseaux Informatiques – Université Amadou Moctar Mbow (UAM)</h5>
+                    <h5>Réseaux Informatiques – Université Amadou Moctar Mbow (UAM)</h5>
                     <h6 >Conception et mise en place d'infrastructures réseaux sécurisées</h6>
-                    <span class="timeline-date">2023 - Présent</span>
+                    <span class="timeline-date">2024 - Présent</span>
                     <ul>
                        
-                        <li>Configuration de routeurs, commutateurs et pare-feu</li>
-                        <li>Analyse du trafic réseau et résolution de problèmes de connectivité</li>
+                        <li>Configuration de routeurs de switchs commutateurs et pare-feu</li>
+                        <li>Analyse du trafic réseau avec Wireshark et résolution de problèmes de connectivité en utilisant des outils de diagnostic comme nmap</li>
                         <li>Utilisation d'outils de surveillance et de diagnostic réseau</li>
                     </ul>
                 </div>
@@ -483,7 +569,7 @@
                     <h6 >Conception, déploiement et sécurisation d’une infrastructure de services réseaux pour une PME</h6>
                     <span class="timeline-date">2023 - Présent</span>
                     <ul>
-                        <li>Configuration de serveurs DNS, FTP, EIGRP, Service de Messagerie, HTTP, HTTPS, DHCP et VPN</li>
+                        <li>Configuration de serveurs DNS, FTP, EIGRP, Service de Messagerie</li>
                         <li>Implémentation de mesures de sécurité pour protéger les services réseaux contre les menaces potentielles</li>
                         <li>Déployer des services réseaux essentiels</li>
                         <li>Assurer l’interopérabilité Windows / Linux</li>
@@ -546,12 +632,34 @@
                 </div>
             </div>
         </div>
+        <div class="timeline">
+            <!-- EXPERIENCE 4 -->
+             <div class="timeline-item reveal-exp">
+                <div class="timeline-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="timeline-content">
+                    <h5>Création d’une application appelée CLAVIRAPID</h5>
+                    <h6 >La mise en place d’une application de dactylographie en ligne permettant aux utilisateurs de pratiquer et d'améliorer leur vitesse de frappe.
+                        Elle permet aux utilisateurs de s'entraîner à taper rapidement et avec précision en fournissant des exercices de dactylographie variés et des statistiques de performance pour suivre les progrès.
+                    </h6>
+                    <span class="timeline-date">2025 - Présent</span>
+                    <ul>
+                        <li>Développement d'une application de dactylographie en ligne pour améliorer la vitesse de frappe des utilisateurs</li>
+                        <li>Fourniture d'exercices de dactylographie variés pour permettre aux utilisateurs de pratiquer différentes compétences de frappe</li>
+                        <li>Intégration de statistiques de performance pour permettre aux utilisateurs de suivre leurs progrès et d'identifier les domaines à améliorer</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
     </div>
 </section>
 
-<!-- ============================================ FORMATION =============================== -->
+<!-- ============================================ FORMATION ============================================================================ -->
 <section id="formation" class="formation-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-5">Formation</h2>
@@ -611,7 +719,7 @@
     </div>
 </section>
 
-<!-- ======================================== PROJECTS ================= -->
+<!-- ======================================== PROJECTS ======================================================================================= -->
 <section id="projects" class="projects-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-5">Projects</h2>
@@ -627,6 +735,9 @@
                         <p>
                         Application web permettant d'ajouter, modifier et supprimer des tâches.
                         Manipulation du DOM et gestion des événements.
+                        Ce site est conçu pour aider les utilisateurs à organiser leurs tâches quotidiennes de manière efficace et intuitive, 
+                        en offrant une interface conviviale pour la gestion de leurs activités.
+
                         </p>
                         <div class="tech-stack">
 
@@ -635,10 +746,11 @@
                             <span>JavaScript</span>
                             <span>Bootstrap</span>
                             <span>TypeScript</span>
+                            <span>Html5</span>
                         </div>
                         <div class="project-buttons">
-                            <a href="#" class="btn btn-primary btn-sm">Voir le projet</a>
-                            <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+                            <a href="images/docs/Gestionnaire_taches.docx" class="btn btn-primary btn-sm mt-5 btn-color download ">Voir le projet</a>
+                            <a href="https://github.com/baye333/Gestion_t-ches" class="btn btn-outline-light btn-sm mt-5">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -652,7 +764,8 @@
                     <div class="project-body">
                         <h5>Application Smarttech</h5>
                         <p>
-                        Application web pour la gestion des documents académiques et des ressources universitaires.
+                        Ce projet a pour objectif la mise en place d’une infrastructure complète de services réseaux intégrant un serveur DNS, un serveur de fichiers partagé (Samba), un service de transfert sécurisé de fichiers (SFTP) 
+                        ainsi qu’une application Web dynamique permettant la gestion centralisée des utilisateurs et des documents.
                         </p>
                         <div class="tech-stack">
 
@@ -663,11 +776,15 @@
                             <span>Apache</span>
                             <span>MySQL</span>
                             <span>PHP</span>
+                            <span>Nginx</span>
+                            <span>Mariadb</span>
+                            <span>Samba</span>
+                            <span>SFTP</span>
                         </div>
                         <div class="project-buttons">
 
-                            <a href="#" class="btn btn-primary btn-sm mt-4">Voir le projet</a>
-                            <a href="#" class="btn btn-outline-light btn-sm mt-4">GitHub</a>
+                            <a href="images/docs/Smarttech.docx" class="btn btn-primary btn-sm mt-3 btn-color download ">Voir rapport</a>
+                            <a href="https://github.com/baye333/Smarttech" class="btn btn-outline-light btn-sm mt-3">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -679,23 +796,112 @@
                         <img src="images/projet_reseaux.png" alt="Projet réseaux">
                     </div>
                     <div class="project-body">
-                        <h5>Infrastructure Réseaux</h5>
+                        <h5>Conception d'Infrastructure Réseaux d'un Campus</h5>
 
                             <p>
-                            Conception et mise en place d'une infrastructure réseau sécurisée
-                            pour une organisation fictive.
-                            </p>
+                            En tant que technicien je suis chargé de concevoir la topologie réseau de ce campus,
+                             en utilisant OSPF comme protocole de routage sur les routeurs Cisco IOS.
+                                J'ai configuré les routeurs pour assurer la connectivité entre les différents bâtiments du campus,
+                                en mettant en place des mesures de sécurité 
                             <div class="tech-stack">
 
                                 <span>Cisco IOS</span>
                                 <span>GNS3</span>
                                 <span>Wireshark</span>
                                 <span>OSPF</span>
+                                <span>TCP/IP</span>
+                                <span>Security </span>
+                                <span>authentication MD5</span>
+                                <span>authentication SHA/HMAC</span>
+
 
                             </div>
                             <div class="project-buttons">
-                                <a href="#" class="btn btn-primary btn-sm mt-5">Voir le projet</a>
-                                <a href="#" class="btn btn-outline-light btn-sm mt-5">GitHub</a>
+                                <a href="images/docs/Rapport Examen.docx" class="btn btn-primary btn-sm mt-2 btn-color download ">Voir rapport</a>
+                                <a href="https://github.com/baye333/Conception-Infrastructure-Réseaux" class="btn btn-outline-light btn-sm mt-2">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                            <!-- PROJECT 3 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/GESTION_TACHES.png" alt="Gestionnaire de tâches">
+                    </div>
+                    <div class="project-body">
+                        <h5>Application web de Gestion de Tâches</h5>
+
+                            <p>
+                                Application web de gestion de tâches permettant aux utilisateurs de créer, modifier et suivre leurs tâches.
+                            </p>
+                            <div class="tech-stack">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>TypeScript</span>
+                                <span>Bootstrap</span>
+
+                            </div>
+                            <div class="project-buttons">
+                                <a href="images/docs/Gestionnaire_taches.docx" class="btn btn-primary btn-sm mt-5 btn-color download ">Voir le projet</a>
+                                <a href="https://github.com/baye333/Gestion_t-ches" class="btn btn-outline-light btn-sm mt-5">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                           <!-- PROJECT 3 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/Generateur_histoire.png" alt="Generateur d'histoires">
+                    </div>
+                    <div class="project-body">
+                        <h5>Projet de Génération de Contenus Narratifs en Python en collaboration</h5>
+
+                            <p>
+                                Application web de génération de contenus narratifs permettant aux utilisateurs de créer et de personnaliser leurs histoires.
+                            </p>
+                            <div class="tech-stack">
+
+                                <span>Python</span>
+                                <span>POO</span>
+                                <span>TKinter</span>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="images/docs/Rapport_POO_Projet3.pdf" class="btn btn-primary btn-sm mt-5 btn-color download ">Voir rapport</a>
+                                <a href="https://github.com/baye333/Generateur-Histoires" class="btn btn-outline-light btn-sm mt-5" disabled>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                            <!-- PROJECT 4 -->
+             <div class="col-lg-4 col-md-6 reveal-project">
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/ClaviRapide.png" alt="Application clavirapid">
+                    </div>
+                    <div class="project-body">
+                        <h5>Application ClaviRapide</h5>
+
+                            <p>
+                                Cette application de dactylographie en ligne permet aux utilisateurs de pratiquer et d'améliorer leur vitesse de frappe.
+                           elle offre des exercices de dactylographie variés et fournit des statistiques de performance pour suivre les progrès des utilisateurs.
+                            </p>
+                            <div class="tech-stack">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+
+                            </div>
+                            <div class="project-buttons">
+                                <a href="https://clavi-rapide.vercel.app/" class="btn btn-primary btn-sm mt-5 btn-color">Voir le projet</a>
+                                <a href="https://github.com/baye333/ClaviRapide" class="btn btn-outline-light btn-sm mt-5">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -704,8 +910,44 @@
         </div>
 </section>
 
+<!-- ================= GITHUB ACTIVITY ================= -->
 
-<!-- =============================================== CERTIFICATIONS ================= -->
+<section id="github" class="github-section py-5">
+    <div class="container">
+        <h2 class="text-center section-title mb-5"> GitHub Activity</h2>
+        <div class="row align-items-center">
+            <!-- STATS GITHUB -->
+             <div class="col-lg-6 mb-4 text-center reveal-left">
+                <img src="https://github-readme-stats.vercel.app/api?username=baye333&show_icons=true&theme=tokyonight" alt="GitHub Stats"
+                class="img-fluid github-stats">
+            </div>
+            <!-- LANGUAGES -->
+             <div class="col-lg-6 mb-4 text-center reveal-right">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=baye333&layout=compact&theme=tokyonight"alt="Top Languages" class="img-fluid github-stats">
+
+            </div>
+        </div>
+
+            <!-- CONTRIBUTION GRAPH -->
+        <div class="row mt-4">
+                <div class="col-12 text-center reveal-bottom">
+                    <img 
+                src="https://github-readme-activity-graph.vercel.app/graph?username=baye333&theme=tokyo-night"
+                alt="GitHub Contribution Graph"
+                class="img-fluid github-graph">
+
+                </div>
+        </div>
+        <!-- BOUTON GITHUB -->
+        <div class="text-center mt-5">
+            <a href="https://github.com/baye333" target="_blank" class="btn btn-dark btn-lg">
+                <i class="fa-brands fa-github"></i> Voir mon GitHub
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- =============================================== CERTIFICATIONS ========================================================================= -->
 <section id="certifications" class="certifications-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-5">Certifications</h2>
@@ -717,7 +959,7 @@
                         <img src="images/into_to_cyber.png" alt="Introduction à la cybersécurité">
                     </div>
                     <div class="cert-body">
-                        <h5>Introduction à la cybersécurité</h5>
+                        <h5>Introduction à la cybersécurité <span class="text-light">(Certifié par Cisco Academy)</span></h5>
                         <p>
                             Ce cours présente les bases de la cybersécurité et les menaces informatiques.
                         </p>
@@ -728,10 +970,12 @@
                              <span class="badge bg-dark text-primary">Network Security</span>
                              <span class="badge bg-dark text-primary">Encryption</span>
                             <span class="badge bg-dark text-primary">Cisco Security</span>
+                            <span class="badge bg-dark text-primary">Security Best Practices</span>
+                            <span class="badge bg-dark text-primary">Incident Response</span>
                         </div>
                         <!-- BOUTON -->
                          <div class="cert-btn">
-                            <a href="images/into_to_cyber.png" target="_blank" class="btn btn-primary btn-sm">
+                            <a href="images/into_to_cyber.png" target="_blank" class="btn btn-primary btn-sm mt-4 btn-color btn-position">
                                 Voir la certification
                             </a>
                         </div>
@@ -745,7 +989,7 @@
                         <img src="images/cybersecurité.png" alt="Introduction à la cybersécurité">
                     </div>
                     <div class="cert-body">
-                        <h5>La cybersécurité</h5>
+                        <h5>La Cybersécurité avancée<span class="text-light">(Certifié par FORCEN)</span></h5>
                         <p>
                             Ce cours présente les bases de la cybersécurité et les menaces informatiques.
                         </p>
@@ -756,10 +1000,38 @@
                             <span class="badge bg-dark text-primary">Security Architecture</span>
                             <span class="badge bg-dark text-primary">Compliance</span>
                             <span class="badge bg-dark text-primary">Risk Management</span>
+                            <span class="badge bg-dark text-primary">risk Assessment</span>
                         </div>
                         <!-- BOUTON -->
                          <div class="cert-btn">
-                            <a href="images/cybersecurité.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                            <a href="images/cybersecurité.png" target="_blank" class="btn btn-primary btn-sm mt-3 btn-color btn-position">Voir la certification</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- CERTIFICATION 1 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/embarquees.png" alt="Internet des objets connectés">
+                    </div>
+                    <div class="cert-body">
+                        <h5>L'internet des Objets connectés</h5>
+                        <p>Ce cours présente les bases de l'internet des objets connectés et ses applications.
+                            avec des exemples de projets pratiques pour illustrer les concepts abordés.
+                        </p>
+                        <!-- OUTILS / TECHNOLOGIES -->
+                         <div class="cert-tools">
+                            <span class="badge bg-dark text-primary">IoT Fundamentals</span>
+                            <span class="badge bg-dark text-primary">IoT Security</span>
+                            <span class="badge bg-dark text-primary">IoT Architecture</span>
+                            <span class="badge bg-dark text-primary">IoT Development</span>
+                            <span class="badge bg-dark text-primary">IoT Applications</span>
+                            
+                        </div>
+                        <!-- BOUTON -->
+                         <div class="cert-btn">
+                            <a href="images/embarquees.png" target="_blank" class="btn btn-primary btn-sm btn-color btn-position">Voir la certification</a>
                         </div>
                     </div>
                 </div>
@@ -771,20 +1043,24 @@
                         <img src="images/cloud_computing.png" alt="Cloud computing">
                     </div>
                     <div class="cert-body">
-                        <h5>Cloud Computing</h5>
+                        <h5>Le Cloud Computing <span class="text-light">(Obtenu par datacamp)</span></h5>
                         <p>Introduction aux concepts du cloud computing et aux services cloud.
-                            elle couvre les modèles de déploiement, les avantages et les défis du cloud computing.
+                        Elle couvre les modèles de déploiement, les avantages et les défis du cloud computing ainsi que les methodes de navigation
+                        en utilisant des techniques modernes et evolutives
+        
                         </p>
                             <div class="cert-tools">
                                 <span class="badge bg-dark text-primary">Cloud Concepts</span>
                                 <span class="badge bg-dark text-primary">Cloud Services</span>
                                 <span class="badge bg-dark text-primary">Cloud Security</span>
                                 <span class="badge bg-dark text-primary">Cloud Architecture</span>
+                                <span class="badge bg-dark text-primary">Cloud Deployment</span>
+                                <span class="badge bg-dark text-primary">Cloud Management</span>
                             </div>
 
                         <!-- BOUTON -->
                             <div class="cert-btn">
-                                <a href="images/cloud_computing.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                                <a href="images/cloud_computing.png" target="_blank" class="btn btn-primary btn-sm btn-color mt-5 btn-position">Voir la certification</a>
                             </div>
                     </div>
                 </div>
@@ -796,9 +1072,9 @@
                         <img src="images/micro_azure.png" alt="Microservices Azure">
                     </div>
                     <div class="cert-body">
-                        <h5>Microservices sur Azure</h5>
+                        <h5>Microservices sur Azure <span class="text-light">(Obtenu par datacamp)</span></h5>
                         <p>Développement et déploiement d'applications basées sur des microservices sur Azure.
-                            elle couvre les concepts de microservices pour la création d'applications évolutives et résilientes.
+                            elle couvre les concepts de microservices pour la création d'applications évolutives et résilientes, ainsi que les services Azure pour le développement et le déploiement de microservices.
                         </p>
                             <div class="cert-tools">
                                 <span class="badge bg-dark text-primary">Microservices Architecture</span>
@@ -808,7 +1084,7 @@
                             </div>
                             <!-- BOUTON -->
                             <div class="cert-btn">
-                                <a href="images/micro_azure.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                                <a href="images/micro_azure.png" target="_blank" class="btn btn-primary btn-sm btn-color mt-5 btn-position">Voir la certification</a>
                             </div>
                     </div>
                 </div>
@@ -820,9 +1096,11 @@
                         <img src="images/udacity.png" alt="Data Science">
                     </div>
                     <div class="cert-body">
-                        <h5>Data Science</h5>
+                        <h5>Data Science <span class="text-light">(Certifié par Udacity)</span></h5>
                         <p>
                             Bases de la data science et techniques d'analyse des données avec Excel.
+                                Le cours couvre les concepts fondamentaux de la data science, les outils et les techniques d'analyse des données, 
+                                ainsi que les applications pratiques de la data science dans différents domaines.
                         </p>
                                 <div class="cert-tools">
                                     <span class="badge bg-dark text-primary">Data Analysis</span>
@@ -832,7 +1110,7 @@
                                 </div>
                             <!-- BOUTON -->
                             <div class="cert-btn">
-                                <a href="images/udacity.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                                <a href="images/udacity.png" target="_blank" class="btn btn-primary btn-sm btn-color btn-position">Voir la certification</a>
                             </div>
 
                             </div>
@@ -845,8 +1123,9 @@
                         <img src="images/python2.png" alt="Python avancé">
                     </div><div class="cert-body">
                         <div class="cert-body">
-                            <h5>Python Avancé</h5>
-                            <p>Techniques avancées pour développer des applications Python robustes.</p>
+                            <h5>Python Avancé <span class="text-light">(Certifié par Cisko Academy)</span></h5>
+                            <p>Techniques avancées pour développer des applications Python robustes.
+                                    Le cours couvre des concepts avancés tels que la programmation orientée objet, les bibliothèques Python populaires. 
                                 <div class="cert-tools">
                                     <span class="badge bg-dark text-primary">Advanced Python Concepts</span>
                                     <span class="badge bg-dark text-primary">Object-Oriented Programming</span>
@@ -855,7 +1134,81 @@
                                 </div>
                                 <!-- BOUTON -->
                                 <div class="cert-btn">
-                                    <a href="images/python2.png" target="_blank" class="btn btn-primary btn-sm">Voir la certification</a>
+                                    <a href="images/python2.png" target="_blank" class="btn btn-primary btn-sm btn-color mt-4 btn-position">Voir la certification</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- CERTIFICATION 6 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/info_et_internet.png" alt="Informatique et internet">
+                    </div><div class="cert-body">
+                        <div class="cert-body">
+                            <h5>Informatique et Internet <span class="text-light">(Certifié par FORCEN)</span></h5>
+                            <p>Ce cours couvre les bases de l'informatique et des technologies internet.
+                                il aborde les concepts fondamentaux de l'informatique, les composants matériels et logiciels.
+                            </p>
+                                <div class="cert-tools">
+                                    <span class="badge bg-dark text-primary">Computer Basics</span>
+                                    <span class="badge bg-dark text-primary">Internet Fundamentals</span>
+                                    <span class="badge bg-dark text-primary">Online Safety</span>
+                                    <span class="badge bg-dark text-primary">Digital Literacy</span>
+                                    <span class="badge bg-dark text-primary">Web Browsing</span>
+                                </div>
+                                <!-- BOUTON -->
+                                <div class="cert-btn">
+                                    <a href="images/info_et_internet.png" target="_blank" class="btn btn-primary btn-sm mt-4 btn-color btn-position">Voir la certification</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <!-- CERTIFICATION 7 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/Ia_pour_tous.png" alt="Intelligence Artificielle pour tous">
+                    </div><div class="cert-body">
+                        <div class="cert-body">
+                            <h5>Intelligence Artificielle pour tous <span class="text-light">(Certifié par FORCEN)</span></h5>
+                            <p>Introduction à l'intelligence artificielle et ses applications dans différents domaines.
+                                Elle couvre les concepts fondamentaux de l'intelligence artificielle, les techniques d'apprentissage automatique,
+                            </p>
+                                <div class="cert-tools">
+                                    <span class="badge bg-dark text-primary">Machine Learning Basics</span>
+                                    <span class="badge bg-dark text-primary">Neural Networks</span>
+                                    <span class="badge bg-dark text-primary">Natural Language Processing</span>
+                                    <span class="badge bg-dark text-primary">Computer Vision</span>
+                                </div>
+                                <!-- BOUTON -->
+                                <div class="cert-btn">
+                                    <a href="images/Ia_pour_tous.png" target="_blank" class="btn btn-primary btn-sm  btn-color btn-position">Voir la certification</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               <!-- CERTIFICATION 7 -->
+             <div class="col-lg-4 col-md-6 reveal-cert">
+                <div class="cert-card">
+                    <div class="cert-img">
+                        <img src="images/certificate-elements-of-ai-fr.png" alt="Intelligence Artificielle">
+                    </div><div class="cert-body">
+                        <div class="cert-body">
+                            <h5>Elements of AI <span class="text-light">(Certifié par L'Université de Helsinki)</span></h5>
+                            <p>Introduction à l'intelligence artificielle et ses applications dans différents domaines.</p>
+                                <div class="cert-tools">
+                                    <span class="badge bg-dark text-primary">Compréhension Conceptuelle de l'IA</span>
+                                    <span class="badge bg-dark text-primary">Maîtrise des Probabilités et de l'Incertitude</span>
+                                    <span class="badge bg-dark text-primary">Machine Learning</span>
+                                    <span class="badge bg-dark text-primary">Analyse Critique et Éthique</span>
+                                </div>
+                                <!-- BOUTON -->
+                                <div class="cert-btn">
+                                    <a href="images/certificate-elements-of-ai-fr.png" target="_blank" class="btn btn-primary btn-sm btn-color btn-position">Voir la certification</a>
                                 </div>
                         </div>
                     </div>
@@ -868,7 +1221,7 @@
 
 
 
-<!-- ================= ==============================CONTACT ================= -->
+<!-- ================= ==============================CONTACT =================================================================================== -->
 <section id="contact" class="contact-section py-5">
     <div class="container">
         <h2 class="text-center section-title mb-3">Contact</h2>
@@ -887,37 +1240,36 @@
             <!-- FORMULAIRE -->
              <div class="col-lg-6 reveal-contact">
                 <div class="contact-card">
-                    <form>
+                    <form id="contact-form">
                         <!-- NOM -->
                         <div class="mb-3 input-group">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-user"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Nom" required>
+                            <input type="text" name="nom" class="form-control" placeholder="Nom" required>
                         </div>
                         <!-- PRENOM -->
                         <div class="mb-3 input-group">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-user"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Prénom" required>
+                            <input type="text" name="prenom" class="form-control" placeholder="Prénom" required>
                         </div>
                         <!-- EMAIL -->
                          <div class="mb-3 input-group">
                             <span class="input-group-text">
                                 <i class="fa-solid fa-envelope"></i>
                             </span>
-                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Email" required>
                         </div>
                         <!-- MESSAGE -->
                         <div class="mb-3">
-                            <textarea class="form-control" rows="5" placeholder="Votre message..." required></textarea>
+                            <textarea class="form-control" name="message" rows="5" placeholder="Votre message..." required></textarea>
                         </div>
                         <!-- BOUTON -->
-                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary contact-btn">
-                                <i class="fa-solid fa-paper-plane"></i> Envoyer le message
-                            </button>
+                         <div class="text-center btn-cont">
+                            <button class="btn btn-primary">Envoyer par Email</button>
+                             <button class="btn btn-success" onclick="openWhatsApp()">WhatsApp</button>   
                         </div>
                     </form>
                 </div>
@@ -927,7 +1279,7 @@
 
 </section>
 
-<!-- ============================================= FOOTER ============================== -->
+<!-- ============================================= FOOTER ================================================================================= -->
 <footer class="footer-section">
     <div class="container">
         <div class="row text-center text-md-start">
@@ -956,13 +1308,15 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#Certifications">Certifications</a></li>
+                    <li><a href="#Experiences">Experiences</a></li>
                 </ul>
             </div>
             <!-- CONTACT -->
              <div class="col-md-4 mb-4">
                 <h5 class="footer-title">Contact</h5>
-                <p><i class="fa-solid fa-location-dot"></i> Mbour, Sénégal</p>
-                <p><i class="fa-solid fa-envelope"></i> bayelahaddia792@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot location"></i> Mbour, Sénégal</p>
+                <p><i class="fa-solid fa-envelope location"></i> bayelahaddia792@gmail.com</p>
                 <div class="social-icons mt-3">
                     <a href="https://github.com/baye333" target="_blank">
                         <i class="fa-brands fa-github"></i>
@@ -989,6 +1343,9 @@
 
 <!-- Script JS personnalisé -->
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+
 
 </body>
 </html>
