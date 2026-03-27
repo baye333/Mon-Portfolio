@@ -437,7 +437,16 @@ background:#051f5c;
     text-align:center;
     margin-top:10px;
 }
+.profile-img{
+     margin-top:500px;
 
+}
+.blob{
+    width:250px;
+    height:250px;
+    margin-top:500px;
+    background: linear-gradient(90deg,#007bff,#00c6ff);
+}
 }
 
 /***************** section  a propos *****************/
