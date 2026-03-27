@@ -445,11 +445,14 @@ background:#051f5c;
     width:250px;
     height:250px;
     margin-top:500px;
-    background: linear-gradient(90deg,#1b82ef,#00c6ff);
+    background: linear-gradient(90deg,#2085f0,#0ec0f1);
 }
 .button-group{
     gap:10px;
 }
+.social-icons{
+    gap:20px; 
+}  
 }
 /***************** section  a propos *****************/
 
