@@ -18,7 +18,7 @@ overflow-x: hidden;
     position: relative;
     font-size:22px;
     color:white;
-    left: -60px;
+    left: -20px;
 }
 
 .logo span{
@@ -171,7 +171,6 @@ footer {
 .nav-item .nav-link {
     color: #9ca3af !important;
     transition: all 0.2s ease-in-out;
-    background-color: blue;
     border-radius: 35px;
     color: white !important;
     height: 37px;
