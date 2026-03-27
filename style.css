@@ -438,14 +438,14 @@ background:#051f5c;
     margin-top:10px;
 }
 .profile-img{
-     margin-top:90px;
+     margin-top:70px;
 
 }
 .blob{
     width:250px;
     height:250px;
     margin-top:500px;
-    background: linear-gradient(90deg,#2085f0,#0ec0f1);
+    background: linear-gradient(60deg,#3990ed,#0ec0f1);
 }
 .button-group{
     gap:10px;
