@@ -18,7 +18,7 @@ overflow-x: hidden;
     position: relative;
     font-size:22px;
     color:white;
-    left: -20px;
+    left: -60px;
 }
 
 .logo span{
@@ -171,6 +171,7 @@ footer {
 .nav-item .nav-link {
     color: #9ca3af !important;
     transition: all 0.2s ease-in-out;
+    background-color: blue;
     border-radius: 35px;
     color: white !important;
     height: 37px;
@@ -404,7 +405,40 @@ transform:translateY(0);
 .dark-mode footer{
 background:#051f5c;
 }
+@media (max-width: 768px){
 
+/* logo centré */
+.logo{
+    left:0;
+    text-align:center;
+}
+
+/* menu */
+.navbar-nav{
+    background:#0b0f19;
+    padding:15px;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+/* liens */
+.nav-item .nav-link{
+    display:block;
+    margin:8px 0;
+    text-align:center;
+    width:100%;
+    background-color: no blue;
+}
+
+/* bouton CV */
+.btn-cv{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+}
+
+}
 
 /***************** section  a propos *****************/
 
@@ -591,6 +625,19 @@ transition:0.3s;
 background:#4da3ff;
 color:white;
 }
+
+@media (max-width: 768px){
+
+.about-img{
+    width:100%;
+}
+
+.about-blob{
+    width:250px;
+    height:250px;
+}
+
+}
 /*******************   section skills **********************************/
 
 .skills-section{
@@ -670,6 +717,20 @@ c'est-à-dire un trait sous le titre */
     font-weight:600;
     border-left:4px solid #4da3ff;
     padding-left:10px;
+}
+
+@media (max-width: 768px){
+
+.skill-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:5px;
+}
+
+.skill-icon{
+    font-size:20px;
+}
+
 }
 
 /******************** section  Experience *********************/
@@ -950,6 +1011,19 @@ c'est-à-dire un halo lumineux */
     margin-top: 15px;
 }
 
+@media (max-width: 768px){
+
+.project-buttons{
+    flex-direction:column;
+    gap:10px;
+}
+
+.project-buttons a{
+    width:100%;
+}
+
+}
+
 
 
 /********************************************* SECTION GITHUB *******************************************************************************/
@@ -1046,6 +1120,18 @@ c'est-à-dire un halo lumineux */
 
 .cert-btn .btn:hover{
     transform:scale(1.05);
+}
+
+@media (max-width: 768px){
+
+.cert-body{
+    text-align:center;
+}
+
+.cert-btn .btn{
+    width:100%;
+}
+
 }
 
 /***************************************** section contact *******************************/
@@ -1179,6 +1265,24 @@ c'est-à-dire un halo lumineux */
     transform: scale(1.1);
     transition:0.3s;
 }
+
+@media (max-width: 768px){
+
+.contact-card{
+    padding:20px;
+}
+
+.map-card{
+    min-height:300px;
+    margin-bottom:20px;
+}
+
+.btn-cont{
+    flex-direction:column;
+    gap:10px;
+}
+
+}
     
  
 
@@ -1253,4 +1357,25 @@ c'est-à-dire un halo lumineux */
 .footer-bottom{
     color:#9ca3af;
     font-size:14px;
+}
+
+@media (max-width: 768px){
+
+.footer-section{
+    text-align:center;
+}
+
+.footer-social{
+    justify-content:center;
+}
+
+}
+
+.container{
+padding-left:15px;
+padding-right:15px;
+}
+
+section{
+padding:60px 0;
 }
