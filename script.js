@@ -52,7 +52,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// close responsive menu after clicking a link
+// cette partie du code sélectionne tous les liens de navigation dans la barre de navigation, 
+// puis ajoute un écouteur d'événement de clic à chacun d'eux. Lorsque l'utilisateur clique sur un lien de navigation, 
+// la fonction crée une instance de la classe Collapse de Bootstrap pour la barre de navigation 
+// et appelle la méthode hide() pour fermer le menu déroulant si celui-ci est ouvert. Cela garantit que le menu 
 const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -63,8 +66,11 @@ navLinks.forEach(link => {
     });
 });
 
-// animate skill bars when scrolling to skills section
-// Listen for the scroll event on the window
+// cette partie du code crée une fonction pour ajouter un écouteur d'événement de scroll à la fenêtre. 
+// Elle sélectionne tous les éléments de type section et les ajoute à une liste. 
+// Ensuite, elle crée une boucle forEach pour parcourir cette liste et ajouter un écouteur d'événement de scroll à chaque élément. 
+// Lorsque l'utilisateur défile, la fonction crée une instance de la classe ScrollSpy de Bootstrap pour chaque section 
+// et appelle la méthode refresh() pour actualiser la position de la section. Cela permet de synchroniser la position des éléments de navigation avec la position de défilement de la page.
 window.addEventListener("scroll", function(){
 
     const skills = document.querySelector("#skills");
@@ -83,6 +89,22 @@ window.addEventListener("scroll", function(){
 
     }
 
+});
+
+
+
+///////////////////// animation process section
+const processElements = document.querySelectorAll(".reveal-process");
+
+window.addEventListener("scroll", () => {
+    processElements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight - 100){
+            el.classList.add("active");
+        }
+    });
 });
 
 
@@ -120,7 +142,7 @@ const observer = new IntersectionObserver(entries => {
             const bar = entry.target;
             bar.style.width = bar.dataset.width;
 
-}
+       }
 
 });
 
@@ -197,6 +219,20 @@ const projectObserver = new IntersectionObserver(entries => {
 });
 
 
+// animation projets en cours
+const ongoingElements = document.querySelectorAll(".reveal-ongoing");
+
+window.addEventListener("scroll", () => {
+    ongoingElements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight - 100){
+            el.classList.add("active");
+        }
+    });
+});
+
 // section certification
 
 
@@ -215,6 +251,45 @@ const certObserver = new IntersectionObserver(entries => {
 
 certs.forEach(el=>{
     certObserver.observe(el);
+});
+
+// animation disponibilité
+const availabilityElements = document.querySelectorAll(".reveal-availability");
+
+window.addEventListener("scroll", () => {
+    availabilityElements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight - 100){
+            el.classList.add("active");
+        }
+    });
+});
+
+// animation témoignages
+const testimonialElements = document.querySelectorAll(".reveal-testimonial");
+
+window.addEventListener("scroll", () => {
+    testimonialElements.forEach(el => {
+        let position = el.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        if(position < screenHeight - 100){
+            el.classList.add("active");
+        }
+    });
+});
+
+const cta = document.querySelector(".reveal-cta");
+
+window.addEventListener("scroll", () => {
+    let position = cta.getBoundingClientRect().top;
+    let screenHeight = window.innerHeight;
+
+    if(position < screenHeight - 100){
+        cta.classList.add("active");
+    }
 });
 
 // section contact
@@ -273,55 +348,58 @@ toggleBtn.addEventListener("click", () => {
 
 
 // EmailJS integration for contact form c'est pour l'intégration d'EmailJS pour le formulaire de contact
+
+// INIT EMAILJS
 (function(){
     emailjs.init("q8XLEJ91ad8Vu2fgF");
 })();
 
+const form = document.getElementById("contact-form");
 
+/* ================= EMAIL ================= */
 
-
-// cette partie du code écoute l'événement de soumission du formulaire de contact, 
-// empêche le comportement par défaut de soumission du formulaire, 
-// puis utilise EmailJS pour envoyer les données du formulaire à un service et un modèle spécifiques. 
-// Si l'envoi est réussi, une alerte de succès est affichée, sinon une alerte d'erreur est montrée.
-document.getElementById("contact-form").addEventListener("submit", function(e){
+form.addEventListener("submit", function(e){
     e.preventDefault();
+
     emailjs.sendForm(
         'service_t0h9t6a',
         'template_bgwp5xc',
         this
-)
-.then(function(){
-    alert("Message envoyé avec succès 🚀");
-}, function(error){
-    alert("Erreur lors de l'envoi ❌");
-
+    )
+    .then(function(){ 
+        // Au lieu de l'alert, on redirige l'utilisateur
+        window.location.href = "success.html"; 
+    }, function(error){
+        alert("Erreur lors de l'envoi ❌");
+        console.log(error);
+    });
 });
 
-});
 
-// elle permet de récupérer les valeurs des champs du formulaire de contact, de construire un message formaté, 
-// puis d'ouvrir WhatsApp avec ce message pré-rempli pour que l'utilisateur puisse l'envoyer directement à un numéro spécifique.
-document.getElementById("contact-form").addEventListener("submit", function(e){
-    e.preventDefault();
-    let nom = document.querySelector('input[placeholder="Nom"]').value;
-    let prenom = document.querySelector('input[placeholder="Prénom"]').value;
-    let email = document.querySelector('input[placeholder="Email"]').value;
-    let message = document.querySelector('textarea').value;
 
-    let texte = `Bonjour Lahad 👋 (mon portfolio)
+/* ================= WHATSAPP ================= */
+
+document.getElementById("whatsapp-btn").addEventListener("click", function(){
+
+    let nom = form.nom.value;
+    let prenom = form.prenom.value;
+    let email = form.email.value;
+    let message = form.message.value;
+
+    let texte = `Bonjour Baye Lahad  (mon portfolio)
 
                     Nom: ${nom}
                     Prénom: ${prenom}
                     Email: ${email}
 
                     Message:
-                    ${message}
-    `;
+                    ${message}`;
 
     let url = "https://wa.me/221773984425?text=" + encodeURIComponent(texte);
 
-window.open(url, "_blank");
+    window.open(url, "_blank");
 
 });
+
+
 

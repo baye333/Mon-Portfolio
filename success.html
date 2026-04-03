@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Envoyé - Succès</title>
+    <style>
+        /* Reset de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1b243b;
+            padding: 20px; /* Évite que le conteneur touche les bords sur mobile */
+        }
+
+        .container {
+            background: #5f76b1;
+            padding: 50px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .icon-box {
+            width: 80px;
+            height: 80px;
+            background: #eafaf1;
+            color: #27ae60;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 25px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 17px;
+            color: #2d2c2c;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        .btn-back {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* ================= MEDIA QUERIES (MOBILE) ================= */
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            .icon-box {
+                width: 70px;
+                height: 70px;
+                font-size: 35px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .btn-back {
+                width: 100%; /* Le bouton prend toute la largeur sur petit écran */
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon-box">✓</div>
+        
+        <h1>Message bien reçu !</h1>
+        
+        <p>Votre demande a été envoyée avec succès. <br>  Nous vous répondrons dans les plus brefs délais.</p>
+        
+        <a href="index.html" class="btn-back">Retour à l'accueil</a>
+    </div>
+
+</body>
+</html>

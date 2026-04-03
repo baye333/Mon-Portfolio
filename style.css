@@ -322,6 +322,10 @@ transform:translateY(0);
 }
 }
 
+/* .anime{
+    animation: typing 2s infinite;
+} */
+
 /* bouton CV */
 
 .btn-cv{
@@ -351,6 +355,7 @@ transform:translateY(0);
     color: #dcdee1;
     transition: 0.3s;
     margin-top: 15px;
+    border-radius: 50%;
 
 }
 .social-icons a i:hover{
@@ -360,7 +365,7 @@ transform:translateY(0);
 .button-group {
     margin-right:10px;
     display: flex;
-    gap: 175px;
+    gap: 130px;
     justify-content: center;
 }
 
@@ -445,7 +450,7 @@ background:#051f5c;
     width:250px;
     height:250px;
     margin-top:500px;
-    background: linear-gradient(60deg,#3990ed,#0ec0f1);
+    background: linear-gradient(30deg,#0ec0f1,#3990ed);
 }
 .button-group{
     gap:10px;
@@ -454,8 +459,7 @@ background:#051f5c;
     gap:20px; 
 }  
 }
-/***************** section  a propos *****************/
-
+/************************************* section  a propos *****************/
 .about-section{
     background:#0b0f19;
     color:white;
@@ -652,7 +656,59 @@ color:white;
 }
 
 }
-/*******************   section skills **********************************/
+/********************************************* PROCESS SECTION ****************/
+
+.process-section{
+    background:#0b0f19;
+    color:white;
+}
+
+/* carte */
+
+.process-card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    height:100%;
+}
+
+.process-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* icône */
+
+.process-icon{
+    font-size:35px;
+    color:#4da3ff;
+    margin-bottom:15px;
+}
+
+/* animation scroll */
+
+.reveal-process{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal-process.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* responsive mobile */
+
+@media (max-width:768px){
+    .process-card{
+        padding:20px;
+    }
+}
+
+
+/***************************************   section skills **********************************/
 
 .skills-section{
     background:#0b0f19;
@@ -1038,7 +1094,87 @@ c'est-à-dire un halo lumineux */
 
 }
 
+/*************** PROJETS EN COURS ****************/
 
+.ongoing-section{
+    background:#0b0f19;
+    color:white;
+}
+
+/* carte */
+
+.ongoing-card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    height:100%;
+}
+
+.ongoing-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* header */
+
+.ongoing-header{
+    display:flex;
+    justify-content:flex-end;
+}
+
+/* badge */
+
+.ongoing-card .badge{
+    font-size:12px;
+}
+
+/* titre */
+
+.ongoing-card h5{
+    color:#4da3ff;
+}
+
+/* barre */
+
+.progress{
+    height:8px;
+    background:#1f2937;
+    border-radius:20px;
+}
+
+.progress-bar{
+    background:linear-gradient(90deg,#007bff,#00c6ff);
+}
+
+/* technologies */
+
+.tech-stack{
+    margin-top:10px;
+}
+
+.tech-stack span{
+    display:inline-block;
+    background:#1e293b;
+    padding:5px 10px;
+    margin:4px;
+    border-radius:6px;
+    font-size:12px;
+    color:#4da3ff;
+}
+
+/* animation */
+
+.reveal-ongoing{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal-ongoing.active{
+    opacity:1;
+    transform:translateY(0);
+}
 
 /********************************************* SECTION GITHUB *******************************************************************************/
 
@@ -1146,6 +1282,191 @@ c'est-à-dire un halo lumineux */
     width:100%;
 }
 
+}
+
+
+/*************** DISPONIBILITÉ ****************/
+
+.availability-section{
+    background:#0b0f19;
+    color:white;
+}
+
+/* carte */
+
+.availability-card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    height:100%;
+}
+
+.availability-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* icône */
+
+.availability-icon{
+    font-size:35px;
+    color:#4da3ff;
+    margin-bottom:15px;
+}
+
+/* badge */
+
+.availability-card .badge{
+    margin-top:10px;
+    padding:8px 12px;
+    font-size:13px;
+}
+
+/* animation */
+
+.reveal-availability{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+ .call-to-action:hover{
+    background-color: #042242;
+    transform:translateY(-2px);
+    box-shadow:0 5px 15px rgba(77,163,255,0.4);
+    color:white;
+
+}
+.reveal-availability.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/*************** TÉMOIGNAGES ****************/
+
+.testimonials-section{
+    background:#0b0f19;
+    color:white;
+}
+
+/* carte */
+
+.testimonial-card{
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    transition:0.3s;
+    height:100%;
+}
+
+.testimonial-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* texte */
+
+.testimonial-text{
+    font-style:italic;
+    color:#d1d5db;
+    margin-bottom:20px;
+}
+
+/* utilisateur */
+
+.testimonial-user{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.testimonial-user img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.testimonial-user h6{
+    margin:0;
+    color:#4da3ff;
+}
+
+.testimonial-user span{
+    font-size:13px;
+    color:#9ca3af;
+}
+
+/* animation */
+
+.reveal-testimonial{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal-testimonial.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/************************************** CTA ****************/
+
+.cta-section{
+    background:#0b0f19;
+    color:white;
+}
+
+/* box */
+
+.cta-box{
+    padding:50px 30px;
+    border-radius:20px;
+    background:#111827;
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+.cta-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* boutons */
+
+.cta-buttons a{
+    transition:0.3s;
+}
+
+.cta-buttons a:hover{
+    transform:scale(1.05);
+}
+
+/* animation */
+
+.reveal-cta{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal-cta.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* responsive */
+
+@media(max-width:768px){
+    .cta-box{
+        padding:30px 20px;
+    }
+
+    .cta-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:15px;
+    }
 }
 
 /***************************************** section contact *******************************/
