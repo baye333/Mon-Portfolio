@@ -108,6 +108,11 @@ window.addEventListener("scroll", () => {
 });
 
 
+
+
+
+
+
 // JavaScript pour déclencher l’animation de révélation lors du défilement
 // Sélectionnez tous les éléments avec les classes "reveal-left" et "reveal-right"
 // Ajoutez un écouteur d'événement pour le défilement de la fenêtre
@@ -153,6 +158,68 @@ const observer = new IntersectionObserver(entries => {
 skillBars.forEach(bar=>{
     observer.observe(bar);
 });
+
+
+// ouvrir / fermer chatbot
+// const chatbot = document.getElementById("chatbot-container");
+// const toggleBtn = document.getElementById("chatbot-toggle");
+// const closeBtn = document.getElementById("close-chat");
+
+// toggleBtn.onclick = () => chatbot.style.display = "flex";
+// closeBtn.onclick = () => chatbot.style.display = "none";
+
+// // envoyer message
+// document.getElementById("send-btn").addEventListener("click", sendMessage);
+
+// function sendMessage(){
+//     let input = document.getElementById("user-input");
+//     let message = input.value.trim();
+
+//     if(message === "") return;
+
+//     let chatBody = document.getElementById("chatbot-body");
+
+    // message utilisateur
+//     let userMsg = document.createElement("div");
+//     userMsg.className = "user-message";
+//     userMsg.textContent = message;
+//     chatBody.appendChild(userMsg);
+
+//     // réponse bot
+//     let botMsg = document.createElement("div");
+//     botMsg.className = "bot-message";
+
+//     botMsg.textContent = getBotResponse(message);
+
+//     setTimeout(() => {
+//         chatBody.appendChild(botMsg);
+//         chatBody.scrollTop = chatBody.scrollHeight;
+//     }, 500);
+
+//     input.value = "";
+// }
+
+// Chat bot simple pour répondre à des mots-clés spécifiques dans les messages de l'utilisateur.
+
+// function getBotResponse(msg){
+//     msg = msg.toLowerCase();
+
+//     if(msg.includes("bonjour") || msg.includes("salut")){
+//         return "Bonjour 👋 comment puis-je vous aider ?";
+//     }
+//     else if(msg.includes("projet")){
+//         return "Vous pouvez voir mes projets dans la section Projects 🚀";
+//     }
+//     else if(msg.includes("contact")){
+//         return "Vous pouvez me contacter via la section Contact 📩";
+//     }
+//     else if(msg.includes("github")){
+//         return "Voici mon GitHub 👨‍💻 : https://github.com/baye333";
+//     }
+//     else{
+//         return "Merci pour votre message 🙌 Je vous répondrai bientôt.";
+//     }
+// }
 
 // pour la section experience 
 
