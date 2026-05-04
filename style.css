@@ -413,54 +413,60 @@ transform:translateY(0);
 .dark-mode footer{
 background:#051f5c;
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
 
-/* logo centré */
-.logo{
-    left:0;
-    text-align:center;
-}
+    /* enlever fond bleu menu mobile */
+    .nav-item .nav-link {
+        background: transparent !important;
+        border-radius: 0 !important;
+        color: #9ca3af !important;
+        height: auto;
+        padding: 12px;
+        text-align: center;
+    }
 
-/* menu */
-.navbar-nav{
-    background:#0b0f19;
-    padding:15px;
-    border-radius:10px;
-    margin-top:10px;
-}
+    /* hover mobile */
+    .nav-item .nav-link:hover {
+        background: rgba(77,163,255,0.1) !important;
+        color: #4da3ff !important;
+        border-radius: 8px;
+    }
 
-/* liens */
-.nav-item .nav-link{
-    display:block;
-    margin:8px 0;
-    text-align:center;
-    width:100%;
-    background-color: no blue;
-}
+    /* lien actif */
+    .nav-item .nav-link.active {
+        background: rgba(77,163,255,0.2) !important;
+        color: white !important;
+        border-radius: 8px;
+    }
 
-/* bouton CV */
-.btn-cv{
-    display:block;
-    width:100%;
-    text-align:center;
-    margin-top:10px;
-}
-.profile-img{
-     margin-top:70px;
+    /* garder le bouton CV stylé */
+    .btn-cv {
+        background: linear-gradient(135deg, #007bff, #00c6ff) !important;
+        border-radius: 30px !important;
+        color: white !important;
+        padding: 12px;
+        margin-top: 10px;
+        display: block;
+    }
 
-}
-.blob{
-    width:250px;
-    height:250px;
-    margin-top:500px;
-    background: linear-gradient(30deg,#0ec0f1,#3990ed);
-}
-.button-group{
-    gap:10px;
-}
-.social-icons{
-    gap:20px; 
-}  
+     /* cacher le blob derrière la photo */
+    .blob,
+    .about-blob {
+        display: none !important;
+    }
+
+    /* enlever animation flottante image (plus propre mobile) */
+    .profile-img,
+    .about-img {
+        animation: none !important;
+    }
+
+    /* centrer proprement l'image */
+    .profile-wrapper,
+    .about-img-wrapper {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
