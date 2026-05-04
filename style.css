@@ -413,7 +413,53 @@ transform:translateY(0);
 .dark-mode footer{
 background:#051f5c;
 }
+
+.theme-toggle-container{
+    display: flex;
+    justify-content: flex-end;
+    right: 80px;
+    position: absolute;
+}
+
 @media (max-width: 768px) {
+
+    .logo{
+        left: -9px;
+    }
+
+    .img-fluid{
+        margin-top: 10px;
+        height: 300px;
+        
+    }
+  .button-group{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* espace propre */
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .button-group a{
+        flex: 1;
+        max-width: 150px;
+        text-align: center;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    /* bouton principal */
+    .button-group .btn-primary{
+        background: linear-gradient(135deg,#007bff,#00c6ff);
+        border: none;
+    }
+
+    /* bouton secondaire */
+    .button-group .btn-outline-light{
+        border: 1px solid #fff;
+    }
 
     /* enlever fond bleu menu mobile */
     .nav-item .nav-link {
