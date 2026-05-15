@@ -1,472 +1,309 @@
-// script.js - interactions for portfolio
-
-// navbar shrink on scroll and background change
-// c'est pour la navbar qui se rétrécit et change de couleur lors du défilement
-// cette fonction écoute l'événement de défilement sur la fenêtre et modifie le style de la barre de navigation en fonction de la position de défilement. Si l'utilisateur a défilé plus de 50 pixels, la barre de navigation rétrécit et son arrière-plan devient plus sombre. Sinon, elle revient à son état initial.
-
-window.addEventListener("scroll", function(){
-    let navbar = document.querySelector(".custom-navbar");
-    if(window.scrollY > 50){
-        navbar.style.padding = "10px 0";
-        navbar.style.background = "rgba(11,15,25,0.95)";
-
-}
-else{
-    navbar.style.padding = "15px 0";
-
-}
-
-});
-
-
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if(pageYOffset >= sectionTop){
-            current = section.getAttribute("id");
-}
-
-});
-
-const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach(link => {
-    link.classList.remove("active");
-    if(link.getAttribute("href") === "#" + current){
-        link.classList.add("active");
-}
-
-});
-
-});
-
-// add 'scrolled' class to navbar when page is scrolled
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-});
-
-// cette partie du code sélectionne tous les liens de navigation dans la barre de navigation, 
-// puis ajoute un écouteur d'événement de clic à chacun d'eux. Lorsque l'utilisateur clique sur un lien de navigation, 
-// la fonction crée une instance de la classe Collapse de Bootstrap pour la barre de navigation 
-// et appelle la méthode hide() pour fermer le menu déroulant si celui-ci est ouvert. Cela garantit que le menu 
-const navLinks = document.querySelectorAll('.navbar-collapse .nav-link');
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        const bsCollapse = new bootstrap.Collapse(document.querySelector('.navbar-collapse'), {
-            toggle: false
-        });
-        bsCollapse.hide();
-    });
-});
-
-// cette partie du code crée une fonction pour ajouter un écouteur d'événement de scroll à la fenêtre. 
-// Elle sélectionne tous les éléments de type section et les ajoute à une liste. 
-// Ensuite, elle crée une boucle forEach pour parcourir cette liste et ajouter un écouteur d'événement de scroll à chaque élément. 
-// Lorsque l'utilisateur défile, la fonction crée une instance de la classe ScrollSpy de Bootstrap pour chaque section 
-// et appelle la méthode refresh() pour actualiser la position de la section. Cela permet de synchroniser la position des éléments de navigation avec la position de défilement de la page.
-window.addEventListener("scroll", function(){
-
-    const skills = document.querySelector("#skills");
-
-    const position = skills.getBoundingClientRect().top;
-
-    const screenPosition = window.innerHeight;
-
-    if(position < screenPosition){
-
-        document.querySelectorAll(".skill-bar").forEach(function(bar){
-
-            bar.style.width = bar.getAttribute("data-width");
-
-        });
-
-    }
-
-});
-
-
-
-///////////////////// animation process section
-const processElements = document.querySelectorAll(".reveal-process");
-
-window.addEventListener("scroll", () => {
-    processElements.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
-
-        if(position < screenHeight - 100){
-            el.classList.add("active");
-        }
-    });
-});
-
-
-
-
-
-
-
-// JavaScript pour déclencher l’animation de révélation lors du défilement
-// Sélectionnez tous les éléments avec les classes "reveal-left" et "reveal-right"
-// Ajoutez un écouteur d'événement pour le défilement de la fenêtre
-// Pour chaque élément, vérifiez sa position par rapport à la fenêtre
-// Si l'élément est visible, ajoutez la classe "reveal-active" pour déclencher l'animation
-// 
-
-const reveals = document.querySelectorAll(".reveal-left, .reveal-right");
-
-window.addEventListener("scroll", () => {
-
-reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-
-
-    if(elementTop < windowHeight - 100){
-        el.classList.add("reveal-active");
-    }
-
-});
-
-});
-
-
-
-const skillBars = document.querySelectorAll(".skill-bar");
-
-const observer = new IntersectionObserver(entries => {
-     entries.forEach(entry => {
-        if(entry.isIntersecting){
-            const bar = entry.target;
-            bar.style.width = bar.dataset.width;
-
-       }
-
-});
-
-},
-
-{threshold:0.5});
-
-skillBars.forEach(bar=>{
-    observer.observe(bar);
-});
-
-
-// ouvrir / fermer chatbot
-// const chatbot = document.getElementById("chatbot-container");
-// const toggleBtn = document.getElementById("chatbot-toggle");
-// const closeBtn = document.getElementById("close-chat");
-
-// toggleBtn.onclick = () => chatbot.style.display = "flex";
-// closeBtn.onclick = () => chatbot.style.display = "none";
-
-// // envoyer message
-// document.getElementById("send-btn").addEventListener("click", sendMessage);
-
-// function sendMessage(){
-//     let input = document.getElementById("user-input");
-//     let message = input.value.trim();
-
-//     if(message === "") return;
-
-//     let chatBody = document.getElementById("chatbot-body");
-
-    // message utilisateur
-//     let userMsg = document.createElement("div");
-//     userMsg.className = "user-message";
-//     userMsg.textContent = message;
-//     chatBody.appendChild(userMsg);
-
-//     // réponse bot
-//     let botMsg = document.createElement("div");
-//     botMsg.className = "bot-message";
-
-//     botMsg.textContent = getBotResponse(message);
-
-//     setTimeout(() => {
-//         chatBody.appendChild(botMsg);
-//         chatBody.scrollTop = chatBody.scrollHeight;
-//     }, 500);
-
-//     input.value = "";
-// }
-
-// Chat bot simple pour répondre à des mots-clés spécifiques dans les messages de l'utilisateur.
-
-// function getBotResponse(msg){
-//     msg = msg.toLowerCase();
-
-//     if(msg.includes("bonjour") || msg.includes("salut")){
-//         return "Bonjour 👋 comment puis-je vous aider ?";
-//     }
-//     else if(msg.includes("projet")){
-//         return "Vous pouvez voir mes projets dans la section Projects 🚀";
-//     }
-//     else if(msg.includes("contact")){
-//         return "Vous pouvez me contacter via la section Contact 📩";
-//     }
-//     else if(msg.includes("github")){
-//         return "Voici mon GitHub 👨‍💻 : https://github.com/baye333";
-//     }
-//     else{
-//         return "Merci pour votre message 🙌 Je vous répondrai bientôt.";
-//     }
-// }
-
-// pour la section experience 
-
-const expElements = document.querySelectorAll(".reveal-exp");
-
-const expObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
-}
-
-});
-
-},
-{threshold:0.3});
-
-expElements.forEach(el=>{
-    expObserver.observe(el);
-});
-
-
-// JavaScript pour déclencher l’animation de révélation lors du défilement
-
-const eduElements = document.querySelectorAll(".reveal-edu");
-
-const eduObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
-}
-
-});
-
-},
-{threshold:0.3
-
-});
-
-eduElements.forEach(el=>{
-    eduObserver.observe(el);
-});
-
-// JavaScript pour déclencher l’animation de révélation lors du défilement
-// pour la section projet
-
-const projects = document.querySelectorAll(".reveal-project");
-
-const projectObserver = new IntersectionObserver(entries => {
-
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add("active");
-        }
-
-        });
-
-        },
-        {threshold:0.3
-
-        });
-
-        projects.forEach(el=>{
-            projectObserver.observe(el);
-});
-
-
-// animation projets en cours
-const ongoingElements = document.querySelectorAll(".reveal-ongoing");
-
-window.addEventListener("scroll", () => {
-    ongoingElements.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
-
-        if(position < screenHeight - 100){
-            el.classList.add("active");
-        }
-    });
-});
-
-// section certification
-
-
-const certs = document.querySelectorAll(".reveal-cert");
-
-const certObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
-}
-
-});
-
-},
-{threshold:0.3});
-
-certs.forEach(el=>{
-    certObserver.observe(el);
-});
-
-// animation disponibilité
-const availabilityElements = document.querySelectorAll(".reveal-availability");
-
-window.addEventListener("scroll", () => {
-    availabilityElements.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
-
-        if(position < screenHeight - 100){
-            el.classList.add("active");
-        }
-    });
-});
-
-// animation témoignages
-const testimonialElements = document.querySelectorAll(".reveal-testimonial");
-
-window.addEventListener("scroll", () => {
-    testimonialElements.forEach(el => {
-        let position = el.getBoundingClientRect().top;
-        let screenHeight = window.innerHeight;
-
-        if(position < screenHeight - 100){
-            el.classList.add("active");
-        }
-    });
-});
-
-const cta = document.querySelector(".reveal-cta");
-
-window.addEventListener("scroll", () => {
-    let position = cta.getBoundingClientRect().top;
-    let screenHeight = window.innerHeight;
-
-    if(position < screenHeight - 100){
-        cta.classList.add("active");
-    }
-});
-
-// section contact
-
-
-const contact = document.querySelectorAll(".reveal-contact");
-
-const contactObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("active");
-}
-
-});
-
-},
-{
-    threshold:0.3
-});
-
-contact.forEach(el=>{
-    contactObserver.observe(el);
-});
-
-
-// Dark mode toggle c'est pour le bouton de basculement du thème sombre
-// Ce code sélectionne le bouton de basculement du thème sombre, le corps du document et l'icône à l'intérieur du bouton. 
-// Il vérifie ensuite si un thème sombre a été précédemment sauvegardé dans le stockage local et applique ce thème si c'est le cas. 
-// Enfin, il ajoute un écouteur d'événement au bouton pour basculer entre les thèmes clair et sombre lorsque l'utilisateur clique dessus,
-//  en mettant à jour le stockage local en conséquence.
-
-const toggleBtn = document.getElementById("theme-toggle");
+/* ============================================================
+   script.js — Portfolio Baye Lahad Dia
+   ============================================================ */
+
+/* ===== THEME ===== */
+const themeToggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
 const body = document.body;
-const icon = toggleBtn.querySelector("i");
 
-/* Charger le thème sauvegardé */
-
-if(localStorage.getItem("theme") === "dark"){
-    body.classList.add("dark-mode");
-    icon.classList.replace("fa-moon","fa-sun");
+function applyTheme(theme) {
+  body.classList.toggle('light', theme === 'light');
+  themeToggles.forEach(btn => {
+    if (!btn) return;
+    const icon = btn.querySelector('i');
+    if (icon) {
+      icon.className = theme === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+    }
+  });
 }
 
-/* Switch thème */
-// Ajouter un écouteur d'événement pour le clic sur le bouton de basculement du thème
-toggleBtn.addEventListener("click", () => {
-    body.classList.toggle("dark-mode");
-    if(body.classList.contains("dark-mode")){
-        icon.classList.replace("fa-moon","fa-sun");
-        localStorage.setItem("theme","dark");
-    }else{
-        icon.classList.replace("fa-sun","fa-moon");
-        localStorage.setItem("theme","light");
-}
+const savedTheme = localStorage.getItem('theme') || 'dark';
+applyTheme(savedTheme);
 
+themeToggles.forEach(btn => {
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const isLight = body.classList.contains('light');
+    const newTheme = isLight ? 'dark' : 'light';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
 });
 
+/* ===== PROGRESS BAR ===== */
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const total = document.body.scrollHeight - window.innerHeight;
+  if (progressBar) progressBar.style.width = (scrolled / total * 100) + '%';
+});
 
-// EmailJS integration for contact form c'est pour l'intégration d'EmailJS pour le formulaire de contact
+/* ===== BACK TO TOP ===== */
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  if (backTop) backTop.classList.toggle('visible', window.scrollY > 400);
+});
+if (backTop) backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// INIT EMAILJS
-(function(){
-    emailjs.init("q8XLEJ91ad8Vu2fgF");
+/* ===== MOBILE MENU ===== */
+const burger = document.getElementById('burger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+  });
+  document.querySelectorAll('.mm-link').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+}
+
+/* ===== ACTIVE NAV LINK ON SCROLL ===== */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.snav-link');
+
+function updateActiveNav() {
+  let currentId = '';
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top <= window.innerHeight * 0.4) currentId = section.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.section === currentId);
+  });
+}
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+/* ===== SKILLS TABS ===== */
+const tabs = document.querySelectorAll('.stab');
+const panels = document.querySelectorAll('.skill-panel');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    panels.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    const target = document.getElementById('tab-' + tab.dataset.tab);
+    if (target) {
+      target.classList.add('active');
+      animateBars(target);
+    }
+  });
+});
+
+function animateBars(panel) {
+  panel.querySelectorAll('.sbar-fill').forEach(fill => {
+    const pct = fill.closest('.sbar-item')?.dataset.pct || '0';
+    fill.style.width = '0';
+    setTimeout(() => { fill.style.width = pct + '%'; }, 50);
+  });
+}
+
+/* ===== INTERSECTION OBSERVER ===== */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+
+    // Skill bars (first active panel)
+    if (el.classList.contains('skills-section')) {
+      const activePanel = el.querySelector('.skill-panel.active');
+      if (activePanel) animateBars(activePanel);
+    }
+
+    // Timeline items
+    if (el.classList.contains('tl-item')) {
+      el.classList.add('visible');
+    }
+
+    // Fade in
+    if (el.classList.contains('fade-in-left') || el.classList.contains('fade-in-right')) {
+      el.classList.add('visible');
+    }
+
+    io.unobserve(el);
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.skills-section, .tl-item, .fade-in-left, .fade-in-right').forEach(el => io.observe(el));
+
+/* ===== PROJECT FILTERS ===== */
+const pfilters = document.querySelectorAll('.pfilter');
+const pcards = document.querySelectorAll('.pcard');
+
+pfilters.forEach(btn => {
+  btn.addEventListener('click', () => {
+    pfilters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    pcards.forEach(card => {
+      const cats = card.dataset.cat || '';
+      const show = filter === 'all' || cats.split(' ').includes(filter);
+      card.classList.toggle('hidden', !show);
+    });
+  });
+});
+
+/* ===== CHATBOT ===== */
+const chatKnowledge = [
+  {
+    keywords: ['qui', 'profil', 'présente', 'toi', 'lahad', 'baye', 'qui est baye'],
+    answer: `Je suis <strong>Baye Lahad Dia</strong>, étudiant en 3ème année d'Ingénierie des Systèmes d'Information et de Données à l'UAM de Diamniadio. Spécialisé en <strong>Cybersécurité & Réseaux</strong>, passionné par le développement logiciel, la data et la sécurité des systèmes.`
+  },
+  {
+    keywords: ['compétence', 'skill', 'technologie', 'langage', 'maîtrise'],
+    answer: `Compétences principales :<br>
+    🔷 <strong>Frontend :</strong> HTML, CSS, JavaScript, TypeScript, Angular, Bootstrap<br>
+    🔶 <strong>Backend :</strong> PHP, Python, Node.js, Express, Java<br>
+    🗄️ <strong>Bases de données :</strong> MySQL, PostgreSQL, Firebase<br>
+    🛡️ <strong>Réseaux & Sécurité :</strong> DNS, DHCP, VPN, Wireshark, pare-feu<br>
+    ☁️ <strong>Cloud :</strong> AWS, Azure, Docker`
+  },
+  {
+    keywords: ['projet', 'réalisation', 'travail', 'application', 'développ'],
+    answer: `Projets réalisés :<br>
+    🚀 <strong>ClaviRapide</strong> — Dactylographie en ligne<br>
+    🌩️ <strong>App Météo</strong> — Angular + OpenWeather API<br>
+    📋 <strong>Gestionnaire de tâches</strong> — Full stack PHP/MySQL<br>
+    🌐 <strong>Smarttech</strong> — Infrastructure réseau + web<br>
+    📄 <strong>SunuCV</strong> — Générateur de CV en ligne<br>
+    🏫 <strong>Campus Network</strong> — Architecture OSPF/Cisco`
+  },
+  {
+    keywords: ['contact', 'joindre', 'email', 'mail', 'whatsapp', 'message'],
+    answer: `📧 <strong>Email :</strong> bayelahaddia49@gmail.com<br>
+    💬 <strong>WhatsApp :</strong> +221 77 398 44 25<br>
+    🔗 <strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/baye-lahad-dia-55b35b339" target="_blank" style="color:var(--gold)">baye-lahad-dia</a><br>
+    🐙 <strong>GitHub :</strong> <a href="https://github.com/baye333" target="_blank" style="color:var(--gold)">github.com/baye333</a>`
+  },
+  {
+    keywords: ['certification', 'diplôme', 'certifié', 'cisco', 'udacity', 'datacamp'],
+    answer: `<strong>8+ certifications :</strong><br>
+    🔐 Intro Cybersécurité — Cisco<br>
+    🛡️ Cybersécurité Avancée — FORCEN<br>
+    ☁️ Cloud Computing — Datacamp<br>
+    🔵 Microservices Azure — Datacamp<br>
+    📊 Data Science — Udacity<br>
+    🐍 Python Avancé — Cisco<br>
+    💻 Informatique & Internet — FORCEN<br>
+    🤖 Elements of AI — Univ. Helsinki`
+  },
+  {
+    keywords: ['disponible', 'Es-tu disponible', 'stage', 'freelance', 'embauche', 'opportunité', 'collabor'],
+    answer: `Lahad est <strong>disponible</strong> pour :<br>
+    🎓 <strong>Stage</strong> en développement, cybersécurité ou data<br>
+    💻 <strong>Freelance</strong> — projets web et solutions numériques<br>
+    🤝 <strong>Collaboration</strong> sur projets innovants<br>
+    🌍 <strong>Remote</strong> — équipes internationales`
+  },
+  {
+    keywords: ['formation', 'étude', 'université', 'uam', 'ingénieur', 'bac'],
+    answer: `Parcours académique :<br>
+    🏫 <strong>Bac S2</strong> — Lycée Alboury Ndiaye (2023-2024)<br>
+    🎓 <strong>Licence 3 Ingénierie Info</strong> — UAM (2023-2026)<br>
+    🔐 <strong>Analyste Cybersécurité</strong> — FORCEN (2025-2026)<br>
+    🚀 <strong>Cycle Ingénieur SI</strong> — UAM (à venir)`
+  },
+  {
+    keywords: ['github', 'code', 'dépôt', 'repo'],
+    answer: `🐙 GitHub : <a href="https://github.com/baye333" target="_blank" style="color:var(--gold)">github.com/baye333</a><br>
+    Projets : ClaviRapide, Smarttech, Gestionnaire de tâches, Infrastructure Réseaux...`
+  }
+];
+
+const defaultAnswer = `Je ne suis pas sûr de comprendre 🤔 Essayez :<br>• "Quelles sont tes compétences ?"<br>• "Quels sont tes projets ?"<br>• "Comment te contacter ?"`;
+
+function scrollChatBottom() {
+  const body = document.getElementById('chatMessages');
+  if (body) body.scrollTop = body.scrollHeight;
+}
+
+function appendChatMsg(content, type) {
+  const body = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + type;
+  div.innerHTML = `<p>${content}</p>`;
+  body.appendChild(div);
+  scrollChatBottom();
+}
+
+function showTyping() {
+  const body = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg bot typing-dots';
+  div.id = 'typingIndicator';
+  div.innerHTML = '<span></span><span></span><span></span>';
+  body.appendChild(div);
+  scrollChatBottom();
+}
+
+function removeTyping() {
+  const t = document.getElementById('typingIndicator');
+  if (t) t.remove();
+}
+
+function getBotAnswer(text) {
+  const lower = text.toLowerCase();
+  for (const item of chatKnowledge) {
+    if (item.keywords.some(k => lower.includes(k))) return item.answer;
+  }
+  return defaultAnswer;
+}
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  appendChatMsg(msg, 'user');
+  input.value = '';
+  showTyping();
+  setTimeout(() => {
+    removeTyping();
+    appendChatMsg(getBotAnswer(msg), 'bot');
+  }, 700);
+}
+
+function askQuestion(q) {
+  const input = document.getElementById('chatInput');
+  if (input) { input.value = q; sendChat(); }
+}
+
+/* ===== EMAILJS ===== */
+(function() {
+  if (typeof emailjs !== 'undefined') emailjs.init('q8XLEJ91ad8Vu2fgF');
 })();
 
-const form = document.getElementById("contact-form");
-
-/* ================= EMAIL ================= */
-
-form.addEventListener("submit", function(e){
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    if (typeof emailjs !== 'undefined') {
+      emailjs.sendForm('service_t0h9t6a', 'template_bgwp5xc', this)
+        .then(() => { window.location.href = 'success.html'; })
+        .catch(err => { alert('Erreur lors de l\'envoi ❌'); console.error(err); });
+    }
+  });
+}
 
-    emailjs.sendForm(
-        'service_t0h9t6a',
-        'template_bgwp5xc',
-        this
-    )
-    .then(function(){ 
-        // Au lieu de l'alert, on redirige l'utilisateur
-        window.location.href = "success.html"; 
-    }, function(error){
-        alert("Erreur lors de l'envoi ❌");
-        console.log(error);
-    });
+const whatsappBtn = document.getElementById('whatsappBtn');
+if (whatsappBtn && contactForm) {
+  whatsappBtn.addEventListener('click', () => {
+    const nom     = contactForm.nom?.value || '';
+    const prenom  = contactForm.prenom?.value || '';
+    const email   = contactForm.email?.value || '';
+    const message = contactForm.message?.value || '';
+    const texte = `Bonjour Baye Lahad (portfolio)\n\nNom: ${nom}\nPrénom: ${prenom}\nEmail: ${email}\n\nMessage:\n${message}`;
+    window.open('https://wa.me/221773984425?text=' + encodeURIComponent(texte), '_blank');
+  });
+}
+
+/* ===== SMOOTH SCROLL FOR INTERNAL LINKS ===== */
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
 });
-
-
-
-/* ================= WHATSAPP ================= */
-
-document.getElementById("whatsapp-btn").addEventListener("click", function(){
-
-    let nom = form.nom.value;
-    let prenom = form.prenom.value;
-    let email = form.email.value;
-    let message = form.message.value;
-
-    let texte = `Bonjour Baye Lahad  (mon portfolio)
-
-                    Nom: ${nom}
-                    Prénom: ${prenom}
-                    Email: ${email}
-
-                    Message:
-                    ${message}`;
-
-    let url = "https://wa.me/221773984425?text=" + encodeURIComponent(texte);
-
-    window.open(url, "_blank");
-
-});
-
-
-
